@@ -16,7 +16,7 @@ namespace SpaceGame
                 Matic m = new Matic();
                 Init i = new Init();
 
-                m.IntroCinematic();
+               // m.IntroCinematic();
                 i.Run();
             }
             catch (Exception e)
