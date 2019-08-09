@@ -41,9 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Character.cs" />
-    <Compile Include="PlayerAttributes.cs" />
+    <Compile Include="Planet\PlanetGenerator.cs" />
+    <Compile Include="Planet\PlanetMenu.cs" />
+    <Compile Include="Planet\SolarSystem.cs" />
+    <Compile Include="Player\Character.cs" />
+    <Compile Include="Planet\Planet.cs" />
+    <Compile Include="Player\PlayerAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Player\Ship.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
