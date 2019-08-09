@@ -41,13 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enums.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="Init.cs" />
-    <Compile Include="Items.cs" />
-    <Compile Include="Matic.cs" />
-    <Compile Include="Menus.cs" />
-    <Compile Include="MenuSelection.cs" />
+    <Compile Include="MenuStuff\Enums.cs" />
+    <Compile Include="Gameplay\Game.cs" />
+    <Compile Include="Gameplay\Init.cs" />
+    <Compile Include="Gameplay\Items.cs" />
+    <Compile Include="MenuStuff\Matic.cs" />
+    <Compile Include="MenuStuff\Menus.cs" />
+    <Compile Include="MenuStuff\MenuSelection.cs" />
     <Compile Include="Planet\PlanetGenerator.cs" />
     <Compile Include="Planet\PlanetMenu.cs" />
     <Compile Include="Planet\SolarSystem.cs" />
@@ -56,7 +56,7 @@
     <Compile Include="Player\PlayerAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Player\Ship.cs" />
-    <Compile Include="WriteText.cs" />
+    <Compile Include="MenuStuff\WriteText.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
