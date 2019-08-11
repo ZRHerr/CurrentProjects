@@ -1,3 +1,12 @@
 # CurrentProjects
-Got the game functional but, still working out the mechanics to increase difficulty.
-SpaceGameProj is the Class Library // will fix naming convention of classes/methods and sln
+--SpaceGame--
+Console application buy/sell/explore
+# TODO
+Create Item and Player Events that occur on a random basis
+Tidy up Character class
+Provide better commentary in classes
+Display Inventory Items in ShowStatus()
+Display Colors Change on Galaxy type
+Create UserInput Class
+Tidy Up menus.
+
