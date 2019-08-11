@@ -3,43 +3,53 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using PracticeASPNet.Models;
 
 namespace PracticeASPNet.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class TripsController : ControllerBase
     {
-        // GET api/values
+        public TripsController(Models.Repository repository)
+        {
+            _repository = repository;
+        }
+
+        private Models.Repository _repository;
+        // GET api/Trips
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public IEnumerable<Models.Trip> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _repository.Get();
         }
 
-        // GET api/values/5
+        // GET api/Trips/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public Trip Get(int id)
         {
-            return "value";
+            return _repository.Get(id);
         }
 
-        // POST api/values
+        // POST api/Trips
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Trip value)
         {
+            _repository.Add(value);
         }
 
-        // PUT api/values/5
+        // PUT api/Trips/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Trip value)
         {
+            _repository.Update(value);
         }
 
-        // DELETE api/values/5
+        // DELETE api/Trips/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            _repository.Remove(id);
         }
     }
 }
