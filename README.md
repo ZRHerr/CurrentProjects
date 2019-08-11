@@ -1,8 +1,7 @@
 # CurrentProjects
 --SpaceGame--
-Console application buy/sell/explore
-\n
-ASP.NET Upcomming Trips Tracker // testing/playing with API's hopefully to understand prior to start of next weeks course.
+--Console application buy/sell/explore
+--ASP.NET Upcomming Trips Tracker // testing/playing with API's hopefully to understand prior to start of next weeks course.
 # TODO
 Create Item and Player Events that occur on a random basis
 Tidy up Character class
