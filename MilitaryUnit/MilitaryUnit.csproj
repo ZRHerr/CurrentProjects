@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AverageStudent.cs" />
+    <Compile Include="BadStudent.cs" />
+    <Compile Include="GoodStudent.cs" />
     <Compile Include="IWeaponAssignment.cs" />
     <Compile Include="People.cs" />
     <Compile Include="Sniper Rifles\BarrettM82.cs" />

@@ -34,7 +34,7 @@ namespace MilitaryUnit
             int rndRank = rnd.Next(0, rank.Length - 1);
             Console.WriteLine("What is your rank!");
             Rank = rank.ElementAt(rndRank);
-            Console.WriteLine($"\"sweating profusely\"{firstName} says, My rank is {rank}, Sir!");
+            Console.WriteLine($"\"sweating profusely\"{firstName} says, My rank is {Rank}, Sir!");
             Console.ReadLine();
             Console.WriteLine("Would you like to continue with this Marine? Y/N");
             char answer = char.Parse(Console.ReadLine());
