@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace MilitaryUnit
 {
-    class Classroom : People, IWeaponAssignment
+    class Platoon : People, IWeaponAssignment
     {
         
-        public override void Study(string a)
+        public override void Train(string a)
         {
-            Console.WriteLine($"The Student attemps to rotate and Array.");
-        }
-        public override void Test(string a)
-        {
-            Console.WriteLine($"The Student has room for improvement");
+            Console.WriteLine($"Goes to the field");
         }
 
         public void WeaponAssignment()

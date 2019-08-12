@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace MilitaryUnit
 {
-    class BadStudent : People, IWeaponAssignment
+    class Infantry : People, IWeaponAssignment
     {
-        public override void Study(string a)
+        public override void Train(string a)
         {
-            Console.WriteLine($"The Student is still working on the MathApp", ConsoleColor.Red);
-        }
-        public override void Test(string a)
-        {
-            Console.WriteLine($"The Student is probably going to fail", ConsoleColor.Red);
+            Console.WriteLine($"Goes to the field and runs out of cigarrettes", ConsoleColor.Red);
         }
         public void WeaponAssignment()
         {

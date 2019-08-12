@@ -43,25 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AverageStudent.cs" />
-    <Compile Include="BadStudent.cs" />
-    <Compile Include="GoodStudent.cs" />
-    <Compile Include="IWeaponAssignment.cs" />
-    <Compile Include="People.cs" />
-    <Compile Include="Sniper Rifles\BarrettM82.cs" />
-    <Compile Include="Handguns\BerettaM9.cs" />
-    <Compile Include="Sniper Rifles\M110SASS.cs" />
-    <Compile Include="Automatic Rifles\M16A4.cs" />
-    <Compile Include="Machine Guns\M240L.cs" />
-    <Compile Include="Automatic Rifles\M27_IAR.cs" />
-    <Compile Include="Machine Guns\MK48.cs" />
-    <Compile Include="Shotguns\Mossberg590.cs" />
+    <Compile Include="Personnel\ScoutSniper.cs" />
+    <Compile Include="Personnel\Infantry.cs" />
+    <Compile Include="Personnel\MachineGunner.cs" />
+    <Compile Include="Weapons\IWeaponAssignment.cs" />
+    <Compile Include="Personnel\People.cs" />
+    <Compile Include="Weapons\Sniper Rifles\BarrettM82.cs" />
+    <Compile Include="Weapons\Handguns\BerettaM9.cs" />
+    <Compile Include="Weapons\Sniper Rifles\M110SASS.cs" />
+    <Compile Include="Weapons\Automatic Rifles\M16A4.cs" />
+    <Compile Include="Weapons\Machine Guns\M240L.cs" />
+    <Compile Include="Weapons\Automatic Rifles\M27_IAR.cs" />
+    <Compile Include="Weapons\Machine Guns\MK48.cs" />
+    <Compile Include="Weapons\Shotguns\Mossberg590.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shotguns\Remington870.cs" />
-    <Compile Include="Handguns\SIG_SauerM11.cs" />
-    <Compile Include="Classroom.cs" />
-    <Compile Include="Weapons.cs" />
+    <Compile Include="Weapons\Shotguns\Remington870.cs" />
+    <Compile Include="Weapons\Handguns\SIG_SauerM11.cs" />
+    <Compile Include="Personnel\Platoon.cs" />
+    <Compile Include="Weapons\Weapons.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

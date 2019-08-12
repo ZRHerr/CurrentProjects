@@ -11,7 +11,7 @@ namespace MilitaryUnit
         static void Main(string[] args)
         {
             Console.WriteLine("\r\nLet's meet some MSSA Marines.");
-            BadStudent bad = new BadStudent();
+            Infantry bad = new Infantry();
             bad.GetInfo();
 
             studentChoice:
@@ -24,15 +24,15 @@ namespace MilitaryUnit
             switch (studentChoice)
             {
                 case 1:
-                    GoodStudent goodStudent = new GoodStudent();
+                    MachineGunner goodStudent = new MachineGunner();
                     goodStudent.WeaponAssignment();
                     break;
                 case 2:
-                    BadStudent BadStudent = new BadStudent();
+                    Infantry BadStudent = new Infantry();
                     BadStudent.WeaponAssignment();
                     break;
                 case 3:
-                    AverageStudent AverageStudent = new AverageStudent();
+                    ScoutSniper AverageStudent = new ScoutSniper();
                     AverageStudent.WeaponAssignment();
                     break;
                 default:
@@ -64,18 +64,18 @@ namespace MilitaryUnit
             switch (TestChoice)
             {
                 case 1:
-                    Classroom classroom = new Classroom();
-                    classroom.Test(classroom.ToString());
+                    Platoon platoon = new Platoon();
+                    platoon.Train(platoon.ToString());
                     break;
 
                 case 2:
-                    BadStudent BadStudent = new BadStudent();
-                    BadStudent.Test(BadStudent.ToString());
+                    Infantry infantry = new Infantry();
+                    infantry.Train(infantry.ToString());
                     break;
 
                 case 3:
-                    AverageStudent AverageStudent = new AverageStudent();
-                    AverageStudent.Test(AverageStudent.ToString());
+                    ScoutSniper sniper = new ScoutSniper();
+                    sniper.Train(sniper.ToString());
                     break;
 
                 default:

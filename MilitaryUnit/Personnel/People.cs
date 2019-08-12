@@ -12,7 +12,7 @@ namespace MilitaryUnit
         private string lastName;
         private string Rank;
 
-        public abstract void Study(string a);
+
         public string[] personFirstName = {"Chance", "Lindsey", "Miguel", "Timothy", "Joshua", "Mario",
         "Brandon", "Zachary", "Santana", "Ramu", "Brandon", "Daniel", "Alejandro", "Alexander", "Pharaoh", "Tyler",
         "Kevin", "Jonathan", "Robert", "Michael", "William", "Jay", "Jeffrey", "Stephen", "David", "Tom"};
@@ -52,7 +52,7 @@ namespace MilitaryUnit
                 GetInfo();
             }
         }
-        public abstract void Test(string a);
+        public abstract void Train(string a);
         public void Sleep()
         {
             Console.WriteLine($"{rank}\t{firstName},{lastName} Removes their boots and lays on ISO mat.");
