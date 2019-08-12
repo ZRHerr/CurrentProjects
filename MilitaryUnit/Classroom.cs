@@ -11,11 +11,11 @@ namespace MilitaryUnit
         
         public override void Study(string a)
         {
-            Console.WriteLine($"The {a} attemps to rotate and Array.");
+            Console.WriteLine($"The Student attemps to rotate and Array.");
         }
         public override void Test(string a)
         {
-            Console.WriteLine($"The {a} has room for improvement");
+            Console.WriteLine($"The Student has room for improvement");
         }
 
         public void WeaponAssignment()
