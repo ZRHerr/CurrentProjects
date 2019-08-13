@@ -8,6 +8,18 @@ namespace MilitaryUnit
 {
     class MachineGunner : People, IWeaponAssignment
     {
+        Random rnd = new Random();
+        public MachineGunner()
+            {
+                int rndName = rnd.Next(0, personFirstName.Length - 1);
+                int rndRank = rnd.Next(0, rank.Length - 1);
+                string gunnerrank = rank.ElementAt(rndRank);
+                string gunnerfirst = personFirstName.ElementAt(rndName);
+                string gunnerlast = personLastName.ElementAt(rndName);
+                Console.WriteLine($"Welome{gunnerrank},{gunnerfirst},{gunnerlast} from Bravo Company to the team");
+            WeaponAssignment();
+            }
+        
         public override void Train(string a)
         {
             Console.WriteLine($"Fires Blindly due to lack of sleep", ConsoleColor.Green);

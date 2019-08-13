@@ -8,7 +8,36 @@ namespace MilitaryUnit
 {
     class Platoon : People, IWeaponAssignment
     {
-        
+        public new void GetInfo()
+        {
+            Random rnd = new Random();
+            int rndName = rnd.Next(0, personFirstName.Length - 1);
+            Console.WriteLine("What is your name Marine!");
+            string first = personFirstName.ElementAt(rndName);
+            string last = personLastName.ElementAt(rndName);
+            Console.WriteLine($"My name is {first}, {last}! Sir!");
+            Console.ReadLine();
+            int rndRank = rnd.Next(0, rank.Length - 1);
+            Console.WriteLine("What is your rank!");
+           string rnk = rank.ElementAt(rndRank);
+            Console.WriteLine($"\"sweating profusely\"{first} says, My rank is {rnk}, Sir!");
+            Console.ReadLine();
+            Console.WriteLine("Would you like to continue with this Marine? Y/N");
+            char answer = char.Parse(Console.ReadLine());
+            if (answer == 'y' || answer == 'Y')
+            {
+                return;
+            }
+            else if (answer == 'n' || answer == 'N')
+            {
+                GetInfo();
+            }
+            else
+            {
+                Console.WriteLine("Please enter Y/N.");
+                GetInfo();
+            }
+        }
         public override void Train(string a)
         {
             Console.WriteLine($"Goes to the field");

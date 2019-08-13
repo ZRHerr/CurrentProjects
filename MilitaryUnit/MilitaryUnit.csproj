@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EasyMission.cs" />
+    <Compile Include="HardMission.cs" />
+    <Compile Include="Mission.cs" />
     <Compile Include="Personnel\ScoutSniper.cs" />
     <Compile Include="Personnel\Infantry.cs" />
     <Compile Include="Personnel\MachineGunner.cs" />

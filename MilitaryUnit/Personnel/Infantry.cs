@@ -8,6 +8,17 @@ namespace MilitaryUnit
 {
     class Infantry : People, IWeaponAssignment
     {
+        Random rnd = new Random();
+        public Infantry()
+        {
+            int rndName = rnd.Next(0, personFirstName.Length - 1);
+            int rndRank = rnd.Next(0, rank.Length - 1);
+            string infantryrank = rank.ElementAt(rndRank);
+            string infantryfirst =personFirstName.ElementAt(rndName);
+            string infantrylast = personLastName.ElementAt(rndName);
+            Console.WriteLine($"Welome {infantryrank},{infantryfirst},{infantrylast} from Alpha to the team");
+            WeaponAssignment();
+        }
         public override void Train(string a)
         {
             Console.WriteLine($"Goes to the field and runs out of cigarrettes", ConsoleColor.Red);

@@ -8,44 +8,68 @@ namespace MilitaryUnit
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
-            Console.WriteLine("\r\nLet's meet some MSSA Marines.");
-            Infantry bad = new Infantry();
-            bad.GetInfo();
+            Console.WriteLine("\r\nGear up we got a mission!");
 
-            studentChoice:
+            Platoon plt = new Platoon();
+                plt.GetInfo();
+            Console.ReadLine();
+
+
+            Console.WriteLine("Lets review the mission details\r\n" +
+                "1: Easy Mission\r\n" +
+                "2: Hard Mission");
+            int missionChoice = int.Parse(Console.ReadLine());
+            if(missionChoice == 1)
+            {
+                EasyMission EM = new EasyMission();
+                EM.MissionRequirements();
+                
+            }
+            else if(missionChoice == 2)
+            {
+                HardMission HM = new HardMission();
+                HM.MissionWeaponRequirements();
+            }
+
+
+
+            
+
+            marineChoice:
             Console.WriteLine("Colors Begins to play!\r\n" +
-                "Sir, I think these Marines Need weapons during this course, Just to ensure they stay proficient with it.\r\n" +
-                "1:: Give this student a Sniper\r\n" +
-                "2:: Give this student a M16\r\n" +
-                "3:: Give this student an M240");
+                "Sir, I think I need another person or two to bring along with.\r\n" +
+                "1:: Bring a MachineGunner\r\n" +
+                "2:: Bring a good ole fashion 0311\r\n" +
+                "3:: Bring a scout sniper");
             int studentChoice = int.Parse(Console.ReadLine());
             switch (studentChoice)
             {
                 case 1:
-                    MachineGunner goodStudent = new MachineGunner();
-                    goodStudent.WeaponAssignment();
+                    MachineGunner gunner = new MachineGunner();
+                    gunner.WeaponAssignment();
                     break;
                 case 2:
-                    Infantry BadStudent = new Infantry();
-                    BadStudent.WeaponAssignment();
+                    Infantry infantry2 = new Infantry();
+                   infantry2.WeaponAssignment();
                     break;
                 case 3:
-                    ScoutSniper AverageStudent = new ScoutSniper();
-                    AverageStudent.WeaponAssignment();
+                    ScoutSniper sniper = new ScoutSniper();
+                    sniper.WeaponAssignment();
                     break;
                 default:
                     break;
             }
-            Console.WriteLine("\r\nShould we give them a different weapon? Y/N");
+            Console.WriteLine("\r\nShould we bring anyone else? Y/N");
             string restartChoice = Console.ReadLine();
             switch (restartChoice)
             {
                 case "y":
-                    goto studentChoice;
+                    goto marineChoice;
                 case "Y":
-                    goto studentChoice;
+                    goto marineChoice;
                 case "n":
                     break;
                 case "N":
@@ -54,23 +78,23 @@ namespace MilitaryUnit
                     break;
             }
 
-            selectTest:
-            Console.WriteLine("\r\nHeres their evaluations, Sir! What type of student should we breif the commander they are?\r\n" +
-                "1:: Evaluate as a good student\r\n" +
-                "2:: Evaluate as a bad student\r\n" +
-                "3:: Evaluate as a average student");
-            int TestChoice = int.Parse(Console.ReadLine());
+            selectTrain:
+            Console.WriteLine("\r\nLets get some quick training in\r\n" +
+                "1:: Train the MachineGunner\r\n" +
+                "2:: Train the Infantryman\r\n" +
+                "3:: Train the sniper");
+            int TrainChoice = int.Parse(Console.ReadLine());
 
-            switch (TestChoice)
+            switch (TrainChoice)
             {
                 case 1:
-                    Platoon platoon = new Platoon();
-                    platoon.Train(platoon.ToString());
+                    MachineGunner gunner = new MachineGunner();
+                    gunner.Train(gunner.ToString());
                     break;
 
                 case 2:
-                    Infantry infantry = new Infantry();
-                    infantry.Train(infantry.ToString());
+                    Infantry infantry2 = new Infantry();
+                    infantry2.Train(infantry2.ToString());
                     break;
 
                 case 3:
@@ -81,15 +105,15 @@ namespace MilitaryUnit
                 default:
                     break;
             }
-            Console.WriteLine("\r\nThe Commander has been breifed.\r\n\r\n" +
-                "Should we submit a new breif on this student? Y/N");
-            string restartTest = Console.ReadLine();
-            switch (restartTest)
+            Console.WriteLine("\r\nTraining complete (Well that was useful)\r\n\r\n" +
+                "Should we train some more or do you think we are good? Y/N");
+            string restartTrain = Console.ReadLine();
+            switch (restartTrain)
             {
                 case "y":
-                    goto selectTest;
+                    goto selectTrain;
                 case "Y":
-                    goto selectTest;
+                    goto selectTrain;
                 case "n":
                     break;
                 case "N":
@@ -98,9 +122,9 @@ namespace MilitaryUnit
                     break;
             }
 
-            Console.WriteLine("Okay you can leave now!");
-            bad.Eat();
-            bad.Sleep();
+            Console.WriteLine("Well it could have been better, but I guess we're done here");
+            plt.Eat();
+            plt.Sleep();
         }
     }
 }
