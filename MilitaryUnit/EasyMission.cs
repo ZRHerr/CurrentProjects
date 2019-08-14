@@ -11,7 +11,6 @@ namespace MilitaryUnit
 
         public EasyMission()
         {
-            MissionRequirements();
             Infantry infantry = new Infantry();
             Console.WriteLine("GoodLuck!");
         }

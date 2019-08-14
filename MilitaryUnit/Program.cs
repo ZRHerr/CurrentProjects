@@ -89,16 +89,19 @@ namespace MilitaryUnit
             {
                 case 1:
                     MachineGunner gunner = new MachineGunner();
+                    Console.Clear();
                     gunner.Train(gunner.ToString());
                     break;
 
                 case 2:
                     Infantry infantry2 = new Infantry();
+                    Console.Clear();
                     infantry2.Train(infantry2.ToString());
                     break;
 
                 case 3:
                     ScoutSniper sniper = new ScoutSniper();
+                    Console.Clear();
                     sniper.Train(sniper.ToString());
                     break;
 
@@ -125,6 +128,7 @@ namespace MilitaryUnit
             Console.WriteLine("Well it could have been better, but I guess we're done here");
             plt.Eat();
             plt.Sleep();
+            Console.ReadLine();
         }
     }
 }

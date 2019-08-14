@@ -55,11 +55,11 @@ namespace MilitaryUnit
         public abstract void Train(string a);
         public void Sleep()
         {
-            Console.WriteLine($"{rank}\t{firstName},{lastName} Removes their boots and lays on ISO mat.");
+            Console.WriteLine("Removes their boots and lays on ISO mat.");
         }
         public void Eat()
         {
-            Console.WriteLine($"{rank}\t{firstName},{lastName} Eats an MRE");
+            Console.WriteLine("Eats an MRE");
         }
     }
 }
