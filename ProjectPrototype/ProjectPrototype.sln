@@ -5,6 +5,7 @@ VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F7F9C7E-A377-422A-9D67-0B655C3BF507}"
 	ProjectSection(SolutionItems) = preProject
+		Contact.html = Contact.html
 		Home.html = Home.html
 		Index.html = Index.html
 		Register.html = Register.html

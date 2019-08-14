@@ -76,7 +76,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #F0F8FF;
+		background: #007382;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -91,7 +91,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #808080;
+		color: #fff;
 		font-family: 'Ubuntu', sans-serif;
 		font-size: 15pt;
 		font-weight: 300;
@@ -1761,7 +1761,7 @@ input, select, textarea {
 
 			header.special .icon:before {
 				font-size: 3.5em;
-				opacity: 0.35;
+				opacity: 0.8;
 			}
 
 	footer > :last-child {
@@ -2225,8 +2225,8 @@ input, select, textarea {
 		}
 
 		.wrapper.style4 {
-			background: #fff;
-			color: inherit;
+			background: rgba(52,27,43,0.5);
+			color: #fff !important;
 			padding: 4em;
 		}
 
@@ -2441,7 +2441,7 @@ input, select, textarea {
 				-webkit-transition: none;
 				-ms-transition: none;
 				transition: none;
-				color: inherit;
+				color: #291c24;
 				text-decoration: none;
 				padding: 0 1em;
 				border: 0;
