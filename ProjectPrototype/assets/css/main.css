@@ -2273,7 +2273,7 @@ input, select, textarea {
 	}
 
 	#header {
-		background: white;
+		background: rgba(52,27,43,0.5);
 		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
 		color: inherit;
 		cursor: default;
@@ -2319,7 +2319,7 @@ input, select, textarea {
 						display: none;
 					}
 
-					/* I want to eat & I want to cook buttons */
+					
 					#header nav ul li a {
 						border: solid 1px black;
 						color: inherit;
@@ -2364,9 +2364,9 @@ input, select, textarea {
 						-webkit-transition: all 0.2s ease-in-out;
 						-ms-transition: all 0.2s ease-in-out;
 						transition: all 0.2s ease-in-out;
-						background: rgba(255, 255, 255, 0.15);
+						background: rgba(52,27,43,0.5);
 						border: 2px solid #291C24;
-						/* I want to eat hover */
+						
 					}
 
 					#header nav ul li.current > a {
@@ -2398,7 +2398,7 @@ input, select, textarea {
 			}
 
 				#header.alt nav ul li.active > a, #header.alt nav ul li:hover > a {
-					border: solid 3			px white;
+					border: solid 3			px black;
 				}
 
 /* Dropotron */
@@ -2995,7 +2995,7 @@ input, select, textarea {
 					}
 
 					#navButton .toggle:before {
-						color: #fff;
+						color: background: rgba(52,27,43,0.5);
 						content: '\f0c9';
 						font-size: 1em;
 						height: 40px;

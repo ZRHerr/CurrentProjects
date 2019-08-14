@@ -1,33 +1,31 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE HTML>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
+    <title>Project 6</title>
     <meta charset="utf-8" />
-    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/sign-up.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
 </head>
-<body class="contact is-preload">
+<body class="no-sidebar is-preload">
     <div id="page-wrapper">
-
         <!-- Header -->
-        <header id="header" class="alt">
-            <h1 id="logo"><a href="logo.png">MSSA Project</a></h1>
+        <header id="header">
+            <h1 id="logo"><a href="index.html">MSSA Project<span></span></a></h1>
             <nav id="nav">
                 <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
 
-                    <li class="current"><a href="Index.html">Sign in</a></li>
-                    <li><a href="Register.html" class="button primary">Register</a></li>
+                    <li><a href="#" class="button primary">Register</a></li>
+                    <li class="submenu">
 
                     <li class="submenu" style="text-align:center;">
-                        <i class="fas fa-bars" style="color:#291C24;"></i>
+                        <i class="fas fa-bars"></i>
                         <ul>
                             <li class="submenu">
-                                <a href="#">Business App</a>
+                                <a href="Provider.html">Business App</a>
                                 <ul style="text-align:center;">
-                                    Top Choices
                                     <li><a href="#">Sign-in</a></li>
                                     <li><a href="#">Register</a></li>
                                     <li><a href="#">FAQ</a></li>
@@ -41,54 +39,52 @@
                 </ul>
             </nav>
         </header>
+        <section id="banner">
+
+
+
+        </section>
 
         <!-- Main -->
-        <article id="main">
+        <!-- One -->
+        <section class="wrapper style4 container">
+            <section>
 
-            <header class="special container">
-                <span class="icon fa-envelope"></span>
-                <h2>Questions?</h2>
-                <p>Let us know by filling out the form below.</p>
-            </header>
+                <h3 style="text-align:center;">Create your account</h3>
+                <p style="text-align:center;">Read and agree to our "Terms Of Service"</p>
+                <p>
+                    <form action="" style="text-align: center;">
 
-            <!-- One -->
-            <section class="wrapper style4 special container medium">
+                        <input type="text" name="firstname" value="First Name">
 
-                <!-- Content -->
-                <div class="content">
-                    <form>
-                        <div class="row gtr-50">
-                            <div class="col-6 col-12-mobile">
-                                <input type="text" name="name" placeholder="Name" />
-                            </div>
-                            <div class="col-6 col-12-mobile">
-                                <input type="text" name="email" placeholder="Email" />
-                            </div>
-                            <div class="col-12">
-                                <input type="text" name="subject" placeholder="Subject" />
-                            </div>
-                            <div class="col-12">
-                                <textarea name="message" placeholder="Message" rows="7"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <ul class="buttons">
-                                    <li><input type="submit" class="special" value="Send Message" /></li>
-                                </ul>
-                            </div>
-                        </div>
+                        <input type="text" name="lastname" value="Last Name">
+                        <br>
+                        <input type="text" name="lastname" value="Email">
+
+                        <input type="text" name="lastname" value="Phone">
+                        <br>
+                        <input type="text" name="lastname" value="Create Password">
+
+                        <input type="text" name="lastname" value="Verify Password">
+                        <br>
                     </form>
-                </div>
+                    <form action="Seeking2.html" style="text-align:center;">
+                        <br>
+                        <input type="submit" value="Next">
+                    </form>
 
             </section>
 
-        </article>
+            <!-- Content -->
+            </article>
 
-        <!-- Footer -->
+        </section>
+
+        <!-- Two -->
         <!-- Footer -->
         <footer id="footer">
 
             <ul class="icons">
-
                 <li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
                 <li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
                 <li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
@@ -108,6 +104,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollgress.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
