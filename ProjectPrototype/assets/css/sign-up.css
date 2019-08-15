@@ -2239,7 +2239,7 @@ input, select, textarea {
 		.wrapper.style4 {
 			background: #291C24;
 			color: #fff !important;
-			padding: 4em;
+			padding: 2em;
 		}
 
 /* Header */
@@ -2513,7 +2513,7 @@ input, select, textarea {
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #007382;
-		background-image: url(), url(), url("images/overlay.png"), url("../../images/wrapper-style2-chef.jpg");
+		background-image: url(), url(), url("images/overlay.png"), url("images/car.png");
 		background-position: bottom left, bottom right, top left, top center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
