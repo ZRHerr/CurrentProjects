@@ -1,17 +1,15 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE HTML>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
+    <title>Sign-In</title>
     <meta charset="utf-8" />
-    <title>Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
 </head>
-<body class="contact is-preload">
+<body class="no-sidebar is-preload">
     <div id="page-wrapper">
-
         <!-- Header -->
         <header id="header">
             <h1 id="logo"><a href="index.html">MSSA Project <span></span></a></h1>
@@ -41,53 +39,39 @@
             </nav>
         </header>
 
+
         <!-- Main -->
-        <article id="main">
+        <!-- One -->
+        <section class="wrapper style4 special container medium">
+            <section>
 
-            <header class="special container">
-                <span class="icon fa-envelope"></span>
-                <h2>Questions?</h2>
-                <p>Let us know by filling out the form below.</p>
-            </header>
+                <h3 style="text-align:center;">Sign-In</h3>
+                <p>
+                    <form action="" style="text-align: center;">
 
-            <!-- One -->
-            <section class="wrapper style4 special container medium">
-
-                <!-- Content -->
-                <div class="content">
-                    <form>
-                        <div class="row gtr-50">
-                            <div class="col-6 col-12-mobile">
-                                <input type="text" name="name" placeholder="Name" />
-                            </div>
-                            <div class="col-6 col-12-mobile">
-                                <input type="text" name="email" placeholder="Email" />
-                            </div>
-                            <div class="col-12">
-                                <input type="text" name="subject" placeholder="Subject" />
-                            </div>
-                            <div class="col-12">
-                                <textarea name="message" placeholder="Message" rows="7"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <ul class="buttons">
-                                    <li><input type="submit" class="special" value="Send Message" /></li>
-                                </ul>
-                            </div>
-                        </div>
+                        <input type="text" name="Email" value="Email">
+                        <br />
+                        <input type="password" name="Password" value="Password">
+                        <br>
+                        <input type="button" name="Submit" value="Submit">
                     </form>
-                </div>
+                    <form action="Home.html" style="text-align:center;">
+                        <br>
+                        <input type="submit" value="Forgot Password">
+                    </form>
 
             </section>
 
-        </article>
+            <!-- Content -->
+            </article>
 
-        <!-- Footer -->
+        </section>
+
+        <!-- Two -->
         <!-- Footer -->
         <footer id="footer">
 
             <ul class="icons">
-
                 <li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
                 <li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
                 <li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
@@ -107,6 +91,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollgress.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
