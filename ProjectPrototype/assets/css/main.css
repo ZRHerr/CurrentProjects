@@ -47,6 +47,20 @@ table {
 body {
 	-webkit-text-size-adjust: none;
 }
+section{
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+.section-1 {
+	background: #007382;
+}
+
+.avatar{
+padding-top 1rem;
+	height:200px;
+	border-radius: 50%;
+}
+
 
 mark {
 	background-color: transparent;
@@ -63,6 +77,156 @@ input, select, textarea {
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
+}
+.clearfix:after{
+	content: " ";
+	clear:both;
+	display: block;
+}
+.sidebarleft{
+	width:220px;
+	padding: 20px  0 0 10px ;
+	color:#ffffff;
+	background: rgba(52,27,43,0.5);
+	color:#ffffff;
+	position: absolute;
+	box-sizing:border-box;
+	
+}
+.sidebarleft .sidebar-list >ul>li>a {
+  padding: 5px;
+  display: block;
+  float:left;
+  background: rgba(52,27,43,0.5);
+}
+.sidebarleft .sidebar-list >ul>li>a:hover{
+	background:rgba(42,17,33,0.5);
+}
+.sidebarleft ul li a i{
+	font-size:20px;
+}
+.sidebarleft ul li a{
+	color:#ffffff;
+}
+.sidebarleft ul li a.main-link {
+  width: 140px;
+}
+.sidebarleft ul li a.main-link.full-width{
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.social-media{
+	 padding-left: 20px;
+	 -webkit-box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+	 box-sizing: border-box;
+}
+.social-media ul li a{
+	  padding: 6px 0;
+}
+.sidebar-list .footer-user-info{
+	position: absolute;
+	bottom:0px;
+	left:0;
+	padding-left: 35px;
+
+}
+
+.sidebar-folder{
+	position: absolute;
+	left:240px;
+	/*width:100%;
+	height: 100%;*/
+	
+}
+.message-list{
+	width:625px;
+	position: absolute;
+	left:240px;
+	height:100%;
+	font-weight:normal;
+	background:rgba(52,27,43,0.5); 
+	padding-top: 35px;
+	box-sizing: border-box;
+	
+}
+.message{
+	margin:20px 0;
+}
+.message-list h2{
+	color:#fff;
+	padding-left:45px;
+	padding-bottom: 15px;
+}
+.left{
+	padding-left: 45px;
+	font-weight:normal;
+}
+.left{
+	float:left;
+	font-size: 20px;
+}
+.right{
+	float:right;
+	padding-right: 45px;
+}
+
+.message-list .msg-date{
+	float: right;
+	padding: 40px 45px 0 0;
+	font-size: 12px;
+	
+}
+.message .msg-details{
+	float:left;
+	padding: 11px 15px;
+
+}
+.message  .checkbox{
+	float:left;
+  text-align: center;
+  display: block;
+    padding: 25px 0 0 5px;
+}
+.msg-title {
+  font-size: 20px;
+}
+.msg-preview {
+  font-size: 13px;
+  padding-top: 5px;
+}
+
+
+
+.user-info-left {
+   float: left;
+  width: 290px;
+  margin: 0px 13px;
+}
+.user-info-left p ::after{
+	content: ':';
+	width:250px;
+	height:10px;
+	color:#000;
+	border:1px solid;
+}
+
+.user-info-right {
+  float: right;
+  width: 350px;
+   margin: 0px 13px;
+   text-transform: uppercase;
+}
+
+.footer{
+	position: absolute;
+	bottom: 0px;
+	left:0px;
+	right:0px;
+	width:100%;
+	border:4px solid #fff;
 }
 
 /* Basic */
@@ -2501,7 +2665,7 @@ input, select, textarea {
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #007382;
-		background-image: url(), url(), url("images/overlay.png"), url("../../images/main-chef.jpg");
+		background-image: url(), url(), url("images/overlay.png");
 		background-position: bottom left, bottom right, top left, top center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
