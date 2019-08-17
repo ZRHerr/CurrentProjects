@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>Sign-Up</title>
+    <title>New Vehicle</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -10,63 +10,71 @@
 </head>
 <body class="no-sidebar is-preload">
     <div id="page-wrapper">
+
         <!-- Header -->
         <header id="header">
-            <h1 id="logo"><a href="index.html">QuickFix<span></span></a></h1>
+            <h1 id="logo"><a href="index.html">QuickFix <span></span></a></h1>
             <nav id="nav">
                 <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
-
-                    <li><a href="Register.html" class="button primary">Register</a></li>
+                    <li><a href="Profile.html" class="button primary">Profile</a></li>
+                    <li><a href="Vehicles.html" class="button primary">Vehicles</a></li>
+                    <li><a href="Services.html" class="button primary">Services</a></li>
+                    <li><a href="ContactLoggedIn.html" class="button primary">Contact us</a></li>
                     <li class="submenu" style="text-align:center;">
                         <i class="fas fa-bars"></i>
                         <ul>
                             <li class="submenu">
-                                <a href="Home.html">Business App</a>
-                                <ul style="text-align:center;">
-
-                                    <li><a href="Sign-In.html">Sign-in</a></li>
-                                    <li><a href="Provider2.html">Register</a></li>
-                                    <li><a href="Contact.html">Contact us</a></li>
-                                </ul>
-                            <li><a href="Local.html">Local Businesses</a></li>
-                            <li><a href="How.html">How it Works</a></li>
-                            <li><a href="Contact.html">Contact Us</a> </li>
+                                <a href="Home.html">Sign-out</a>
+                            <li><a href="HowLoggedIn.html">How-it-works</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </header>
-
-
         <!-- Main -->
         <!-- One -->
         <section class="wrapper style4 special container medium">
             <section>
 
-                <h3 style="text-align:center;">Create your account</h3>
-                <p style="text-align:center;">Read and agree to our "Terms Of Service"</p>
-                    <form action="" style="text-align: center;">
+                <br>
+                <p style="text-align:center;">
+                    <span class="icon fas fa-car fa-5x"></span>
+                    <br />Allow for up to 24 hours to verify submitted documents.
+                </p>
 
-                        <input type="text" name="firstname" value="First Name">
+                <input type="text" name="Year" value="Vehicle Year">
 
-                        <input type="text" name="lastname" value="Last Name">
-                        <br>
-                        <input type="text" name="lastname" value="Email">
+                <input type="text" name="Make" value="Vehicle Make">
+                <br>
 
-                        <input type="text" name="lastname" value="Phone">
-                        <br>
-                        <input type="text" name="lastname" value="Create Password">
-
-                        <input type="text" name="lastname" value="Verify Password">
-                        <br>
-                    </form>
-                    <form action="Seeking2.html" style="text-align:center;">
-                        <br>
-                        <input type="submit" value="Next">
-                    </form>
+                <input type="text" name="Model" value="Vehicle Model">
+                <br>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label for="photo-id">
+                            Drivers License
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </label>
+                    </div>
+                </form>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label for="cert">
+                            Vehicle Registration
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </label>
+                    </div>
+                </form>
+                <br>
 
             </section>
+            <form action="Vehicles.html" style="text-align:center;">
+                <input style="margin-left: 30em;" type="submit" value="Finished">
+                <br>
+            </form>
+
 
         </section>
         <!-- Footer -->
@@ -81,7 +89,7 @@
 
             <ul class="copyright">
                 <li>&copy; MSSA</li>
-                <li>Designed by: <a href="#">Zachary Herrera</a></li>
+                <li>Designed by: Zachary Herrera</li>
             </ul>
 
         </footer>

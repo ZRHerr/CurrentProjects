@@ -1,22 +1,23 @@
 ﻿<!DOCTYPE html>
-<html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>My Profile</title>
+    <meta charset="utf-8" />
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
-    <meta name="viewport" content=" width=device-width, initial-scale=1,user-scalable=no" />
 </head>
-
-<body class="no-sidebar is-preload">
+<body class="contact is-preload">
     <div id="page-wrapper">
+
         <!-- Header -->
         <header id="header">
             <h1 id="logo"><a href="index.html">QuickFix <span></span></a></h1>
             <nav id="nav">
                 <ul>
-                    <li><a href="Inbox.html" class="button primary">Messages</a></li>
+                    <li><a href="Profile.html" class="button primary">Profile</a></li>
                     <li><a href="Vehicles.html" class="button primary">Vehicles</a></li>
                     <li><a href="Services.html" class="button primary">Services</a></li>
                     <li><a href="ContactLoggedIn.html" class="button primary">Contact us</a></li>
@@ -31,24 +32,54 @@
                 </ul>
             </nav>
         </header>
+
+        <!-- Main -->
         <article id="main">
-            <section id="about" class="section section-1">
-                <div class="container has-text-centered">
-                    <img class="avatar" src="images/profile.jpg">
+
+            <header class="special container">
+                <span class="icon fa-envelope"></span>
+                <h2>Questions?</h2>
+                <p>Let us know by filling out the form below.</p>
+            </header>
+
+            <!-- One -->
+            <section class="wrapper style4 special container medium">
+
+                <!-- Content -->
+                <div class="content">
+                    <form>
+                        <div class="row gtr-50">
+                            <div class="col-6 col-12-mobile">
+                                <input type="text" name="name" placeholder="Name" />
+                            </div>
+                            <div class="col-6 col-12-mobile">
+                                <input type="text" name="email" placeholder="Email" />
+                            </div>
+                            <div class="col-12">
+                                <input type="text" name="subject" placeholder="Subject" />
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" placeholder="Message" rows="7"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <ul class="buttons">
+                                    <li><input type="submit" class="special" value="Send Message" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="container">
-                    <br />
-                    <p class="intro">
-                        About me................................................
-                    </p>
-                </div>
+
             </section>
 
         </article>
 
+        <!-- Footer -->
+        <!-- Footer -->
         <footer id="footer">
 
             <ul class="icons">
+
                 <li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
                 <li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
                 <li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
@@ -57,16 +88,17 @@
 
             <ul class="copyright">
                 <li>&copy; MSSA</li>
-                <li>Designed by: Zachary Herrera</li>
+                <li>Designed by: <a href="#">Zachary Herrera</a></li>
             </ul>
 
         </footer>
+
     </div>
+
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollgress.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
