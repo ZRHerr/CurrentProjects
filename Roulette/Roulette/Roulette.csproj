@@ -43,16 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Column.cs" />
-    <Compile Include="Corner.cs" />
-    <Compile Include="Dozens.cs" />
-    <Compile Include="EvenOrOdd.cs" />
-    <Compile Include="LowsHighs.cs" />
-    <Compile Include="Number.cs" />
-    <Compile Include="RedOrBlack.cs" />
-    <Compile Include="SixLine.cs" />
-    <Compile Include="Split.cs" />
-    <Compile Include="Street.cs" />
+    <Compile Include="Bets\Column.cs" />
+    <Compile Include="Bets\Corner.cs" />
+    <Compile Include="Bets\Dozens.cs" />
+    <Compile Include="Bets\EvenOrOdd.cs" />
+    <Compile Include="Bets\LowsHighs.cs" />
+    <Compile Include="Bets\Number.cs" />
+    <Compile Include="Bets\RedOrBlack.cs" />
+    <Compile Include="Bets\SixLine.cs" />
+    <Compile Include="Bets\Split.cs" />
+    <Compile Include="Bets\Street.cs" />
     <Compile Include="Utility\Player.cs" />
     <Compile Include="Utility\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
