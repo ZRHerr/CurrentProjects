@@ -43,6 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Column.cs" />
+    <Compile Include="Corner.cs" />
+    <Compile Include="Dozens.cs" />
+    <Compile Include="EvenOrOdd.cs" />
+    <Compile Include="LowsHighs.cs" />
+    <Compile Include="Number.cs" />
+    <Compile Include="RedOrBlack.cs" />
+    <Compile Include="SixLine.cs" />
+    <Compile Include="Split.cs" />
+    <Compile Include="Street.cs" />
     <Compile Include="Utility\Player.cs" />
     <Compile Include="Utility\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
