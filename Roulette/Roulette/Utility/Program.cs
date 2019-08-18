@@ -10,12 +10,14 @@ namespace Roulette
 {
     class Program
     {
-        Menus t = new Menus();
+        Menus menu = new Menus();
         static void Main(string[] args)
         {
-            Menus t = new Menus();
-            t.DisplayTitle();
-            t.DisplayTable();
+            Menus menu = new Menus();
+            menu.DisplayTitle();
+            Console.ReadLine();
+            Console.Clear();
+            menu.Play();
         }
     }
 }

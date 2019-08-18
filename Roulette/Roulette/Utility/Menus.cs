@@ -9,10 +9,9 @@ using System.Threading.Tasks;
 
 namespace Roulette
 {
-    public class Menus
+    public class Menus : WheelSpin
     {
-        bool play;
-        string playAgain;
+
         public void DisplayTitle()
         { 
 WriteText.WriteLine($"*******                     **           **     **            ", ConsoleColor.Red);
@@ -40,9 +39,15 @@ WriteText.WriteLine($"//     //  //////   ////// ///  //////    //     //   ////
         }
         public void Play()
         {
+            bool play;
+            string playAgain;
             while (play = true && Player.money > 0)
             {
                 Console.Clear();
+                DisplayTable();
+                WriteText.WriteLine("");
+                WriteText.WriteLine("");
+                WriteText.WriteLine("");
                 WriteText.WriteLine("Winner, Winner, Chicken, Dinner! Place your bets everyone!", ConsoleColor.Red);
                 WriteText.WriteLine($"Choose a number cooresponding to the bet you'd like to make\n" +
                     $"1: bet on a number(1/36 odds)\t 2: Even or Odds(1/2 odds)\t 3: Red or Black(1/2 odds)\n" +
