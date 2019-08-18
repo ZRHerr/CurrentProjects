@@ -15,6 +15,7 @@ namespace Roulette
         {
             Menus t = new Menus();
             t.DisplayTitle();
+            t.DisplayTable();
         }
     }
 }
