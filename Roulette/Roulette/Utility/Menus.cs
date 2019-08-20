@@ -26,11 +26,11 @@ WriteText.WriteLine($"//     //  //////   ////// ///  //////    //     //   ////
         public void DisplayTable()
         {
             WriteText.WriteLine("    +--------------------------------------------------------+       C", ConsoleColor.DarkYellow);
-            WriteText.WriteLine("    | 3 | 6 | 9 | 12 | 15 | 18 | 21 | 24 | 27 | 30 | 33 | 36 | + --> O", ConsoleColor.DarkYellow);
+            WriteText.WriteLine("    | 3 | 6 | 9 | 12 | 15 | 18 | 21 | 24 | 27 | 30 | 33 | 36 | 3 --> O", ConsoleColor.DarkYellow);
             WriteText.WriteLine("+---+ -------------------------------------------------------|       L", ConsoleColor.DarkYellow);
-            WriteText.WriteLine("| 0 | 2 | 5 | 8 | 11 | 14 | 17 | 20 | 23 | 26 | 29 | 32 | 35 | + --> U", ConsoleColor.DarkYellow);
+            WriteText.WriteLine("| 0 | 2 | 5 | 8 | 11 | 14 | 17 | 20 | 23 | 26 | 29 | 32 | 35 | 2 --> U", ConsoleColor.DarkYellow);
             WriteText.WriteLine("+ --+--------------------------------------------------------|       M", ConsoleColor.DarkYellow);
-            WriteText.WriteLine("    | 1 | 4 | 7 | 10 | 13 | 16 | 19 | 22 | 25 | 28 | 31 | 34 | + --> N", ConsoleColor.DarkYellow);
+            WriteText.WriteLine("    | 1 | 4 | 7 | 10 | 13 | 16 | 19 | 22 | 25 | 28 | 31 | 34 | 1 --> N", ConsoleColor.DarkYellow);
             WriteText.WriteLine("    + -------------------------------------------------------+       S", ConsoleColor.DarkYellow);
             WriteText.WriteLine("    |                |                   |                   |", ConsoleColor.DarkYellow);
             WriteText.WriteLine("    |     1st 12     |       2nd 12      |       3rd 12      |", ConsoleColor.DarkYellow);

@@ -11,6 +11,7 @@ namespace Roulette
     {
         public int ColumnBet(int spin)
         {
+            WheelSpin wheel = new WheelSpin();
             string column;
             int winnings = 0;
             int bet = 0;
@@ -21,12 +22,12 @@ namespace Roulette
             int[] column2 = { 2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35 };
             int[] column3 = { 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36 };
 
-
-            Console.Write("Please chose column (1) (2) or (3)", ConsoleColor.Red);
+            WriteText.WriteLine("Column Bet:", ConsoleColor.Yellow);
+            WriteText.WriteLine("Please Enter number (1) (2) or (3) See board above (1:Bottom, 2:Middle, 3:Top)", ConsoleColor.Red);
             column = Console.ReadLine();
             column.ToLower();
 
-            Console.Write($"You have ${Player.money}. Please enter how much you would like to bet: ", ConsoleColor.Red);
+            WriteText.WriteLine($"You have ${Player.money}. Please enter how much you would like to bet: ", ConsoleColor.Red);
             bet = Int32.Parse(Console.ReadLine());
             if (bet > Player.money)
             {
@@ -34,6 +35,7 @@ namespace Roulette
             }
             if (bet <= Player.money)
             {
+                wheel.displayWheel();
                 Player.money = Player.money - bet;
                 if (red.Contains(spin))
                 {
@@ -68,7 +70,7 @@ namespace Roulette
                         WriteText.WriteLine($"The spin was {spin} red.", ConsoleColor.Green);
                         WriteText.WriteLine($"You won ${winnings}. You now have ${Player.money}.", ConsoleColor.Green);
                     }
-                    if (column2.Contains(spin) && column != "third")
+                    if (column3.Contains(spin) && column != "third")
                     {
                         WriteText.WriteLine($"The spin was {spin} red.", ConsoleColor.Red);
                         WriteText.WriteLine($"You lost ${bet}. You now have ${Player.money}.", ConsoleColor.Red);

@@ -11,6 +11,7 @@ namespace Roulette
     {
         public int CornerBet(int spin)
         {
+            WheelSpin wheel = new WheelSpin();
             int cornerNumber;
             int winnings = 0;
             int bet = 0;
@@ -22,8 +23,8 @@ namespace Roulette
             int[] column2 = { 2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35 };
             int[] column3 = { 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36 };
             int[] PlayerCorner = new int[4];
-
-            WriteText.Write("You are making a corner bet. Select the number that will be located at the bottom left corner of your square: ", ConsoleColor.Red);
+            WriteText.WriteLine("Corner Bet:", ConsoleColor.Yellow);
+            WriteText.Write("Select the number that will be located at the bottom left corner of your square: ", ConsoleColor.Red);
             cornerNumber = Int32.Parse(Console.ReadLine());
             if (column1.Contains(cornerNumber) || column2.Contains(cornerNumber))
             {
@@ -49,6 +50,7 @@ namespace Roulette
             }
             if (bet <= Player.money)
             {
+                wheel.displayWheel();
                 Player.money = Player.money - bet;
                 if (red.Contains(spin))
                 {

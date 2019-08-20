@@ -11,14 +11,15 @@ namespace Roulette
     {
         public int LowOrHighBet(int spin)
         {
+            WheelSpin wheel = new WheelSpin();
             string lowOrHigh;
             int winnings = 0;
             int bet = 0;
             int[] red = { 1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36 };
             int[] black = { 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35 };
             int[] green = { 0, 37 };
-
-            WriteText.Write("Would you like to bet on lows (1-18) or highs (19-36)? Please enter low/high: ", ConsoleColor.Red);
+            WriteText.WriteLine("Lows/Highs Bet:", ConsoleColor.Yellow);
+            WriteText.Write("lows (1-18) or highs (19-36)? Please enter low/high: ", ConsoleColor.Red);
             lowOrHigh = Console.ReadLine();
             lowOrHigh.ToLower();
 
@@ -30,6 +31,7 @@ namespace Roulette
             }
             if (bet <= Player.money)
             {
+                wheel.displayWheel();
                 if (red.Contains(spin))
                 {
                     Player.money = Player.money - bet;

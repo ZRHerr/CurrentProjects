@@ -12,6 +12,7 @@ namespace Roulette
 
         public int DozensBet(int spin)
         {
+            WheelSpin wheel = new WheelSpin();
             string dozen;
             int winnings = 0;
             int bet = 0;
@@ -19,9 +20,9 @@ namespace Roulette
             int[] black = { 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35 };
             int[] green = { 0, 37 };
 
-            WriteText.Write("For 1-12 type first:\n" +
-                "For 13-24 type second:\n" +
-                "For 25-36 type third:", ConsoleColor.Red);
+            WriteText.Write("For dozen (1-12) type first:\n" +
+                "For dozen (13-24) type second:\n" +
+                "For dozen (25-36) type third:", ConsoleColor.Red);
             dozen = Console.ReadLine();
             dozen.ToLower();
 
@@ -33,6 +34,7 @@ namespace Roulette
             }
             if (bet <= Player.money)
             {
+                wheel.displayWheel();
                 Player.money = Player.money - bet;
                 if (red.Contains(spin))
                 {

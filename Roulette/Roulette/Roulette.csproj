@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bets\Column.cs" />
+    <Compile Include="Bets\Columns.cs" />
     <Compile Include="Bets\Corner.cs" />
     <Compile Include="Bets\Dozens.cs" />
     <Compile Include="Bets\EvenOrOdd.cs" />

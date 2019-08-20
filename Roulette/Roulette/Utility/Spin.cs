@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Roulette.Utility
@@ -25,6 +26,105 @@ namespace Roulette.Utility
                 }
             }
             return spin;
+        }
+        public void displayWheel()
+
+        {
+            WriteText.WriteLine("@@@@@@@@@@@@@@@@@@@@@%               #@@@@@@@@@@@@@@@@@@@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@@@@@@@@@@@@@@(  /@@@@@@@@@ @@@@@@@@@(  *@@@@@@@@@@@@@@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@@@@@@@@@@@  #@@@@@@@@@@@@@ @@@@@@@@@@@@@&  @@@@@@@@@@@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@@@@@@@@. %@@@@@@@%   .%@ @@@ @%,   (@@@@@@@@  @@@@@@@@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@@@@@@  @@@@@@#   %@@..@@ @@@ @@( @@@ . *@@@@@@. @@@@@@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@@@@, @% %@&   @@@ &@@ @@ (@& @@ @@@ @@@ . %@@ /@  @@@@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@@@ %@@@@# #@@@ @@@ ,   (&@@* #   . @@@ @@@& *@@@@@ @@@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@% @@@@@ /@% %@@   @@@@ @@@@ *@@@@ @   @@@ /@& @@@@@ *@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@( @@@@(   @@@%  @% @@@@..@@@ &@@@ &@@@@  /@@@.  ,@@@@ .@@", ConsoleColor.Green);
+            WriteText.WriteLine("@% @@@@* @@@@   @@@@@ ,* (@@@@@%  .@@@@ /@   %@@@,.@@@@ *@", ConsoleColor.Green);
+            WriteText.WriteLine("@ @@@@% #  /@, % ,@@& ,@@@@@@@@@@@@@(  /@@@@  @#  / ,@@@@ @", ConsoleColor.Green);
+            WriteText.WriteLine(" ,@@@@ @@@@@, @@@@, ,@@&*@@@@@@@@@/%@@# @@@,   @@@@@ @@@@# ", ConsoleColor.Green);
+            WriteText.WriteLine(" @@@@..@.    @@@@@ @@@* @ @@@@@@@ @, @@@  @@@@     &( @@@@ ", ConsoleColor.Green);
+            WriteText.WriteLine(" @@@@ @@@@@ (@@&. (@@@@@@% %@@@@ /@@@@@@& @@@@& @@@@@ @@@@            ══╗ ╔╗     ╔╗", ConsoleColor.Green);
+            WriteText.WriteLine(" @@@@ @@@%( @@@@@ @@@@@@@@@%   /@@@@@@@@@       /%@@@ @@@@,          ║══╬═╬╬═╦╦═╦╬╬═╦╦═╗", ConsoleColor.Green);
+            WriteText.WriteLine(" @@@@ @@@@& *.    @@@@@@@@@@   %@@@@@@@@@ @@@@@ &@@@@ @@@@,          ╠══║╬║║║║║║║║║║║║╬╠╦╦╦╗", ConsoleColor.Green);
+            WriteText.WriteLine(" @@@@ @@@@@ #@@@@ %@@@@@@@ /@@@% %@@@@@@@ *@@@@ @@@@@ @@@@           ╚══╣╔╩╩╩═╩╩═╩╩╩═╬╗╠╩╩╩╝", ConsoleColor.Green);
+            WriteText.WriteLine(" @@@@ ,@(    @@@@* @@@/ @ @@@@@@@ @. @@@ @@@@%    *@# @@@@              ╚╝           ╚═╝", ConsoleColor.Green);
+            WriteText.WriteLine(" *@@@@ @@@@@.   &@@ (@@( @@@@@@@@@ *@@& ,@@@@* @@@@@ @@@@% ", ConsoleColor.Green);
+            WriteText.WriteLine("@ @@@@( @   @  @@@@@  #@@@@@@@@@@@@@& *@@. &, @,  & .@@@@ @", ConsoleColor.Green);
+            WriteText.WriteLine("@( @@@@,.@@@@   @@ /@@@  .&@@@@@@.  , @@@@@   @@@@( @@@@ .@", ConsoleColor.Green);
+            WriteText.WriteLine("@@* @@@@*   @@@@  @@@@@ @@@@ @@@* @@@@ #@  %@@@    @@@@  @@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@( @@@@@ %@@ /@@   @ @@@@& @@@@ @@@@,  @@% %@@ &@@@@ .@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@@@ @@@@@( /@@@ %@@    ,&, @@@@,    @@@ @@@% ,@@@@@ &@@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@@@@  @@ /@% , @@@ #@@ @@ /@& @@ @@@ @@@ * /@% &@  @@@@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@@@@@@  @@@@@@. , /@@, @@ @@@ @@/ @@& (  @@@@@@* @@@@@@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@@@@@@@@  @@@@@@@@,   (@@ @@@ @@#   .@@@@@@@@  @@@@@@@@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@@@@@@@@@@@  @@@@@@@@@@@@@@ @@@@@@@@@@@@@@  &@@@@@@@@@@@@", ConsoleColor.Green);
+            WriteText.WriteLine("@@@@@@@@@@@@@@@@.  &@@@@@@@@@ @@@@@@@@@&   @@@@@@@@@@@@@@@@", ConsoleColor.Green);
+            Thread.Sleep(1500);
+            Console.Clear();
+            WriteText.WriteLine("@@@@@@@@@@@@@@@@@@@@@%               #@@@@@@@@@@@@@@@@@@@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@@@@@@@@@@@@@@(  /@@@@@@@@@ @@@@@@@@@(  *@@@@@@@@@@@@@@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@@@@@@@@@@@  #@@@@@@@@@@@@@ @@@@@@@@@@@@@&  @@@@@@@@@@@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@@@@@@@@. %@@@@@@@%   .%@ @@@ @%,   (@@@@@@@@  @@@@@@@@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@@@@@@  @@@@@@#   %@@..@@ @@@ @@( @@@ . *@@@@@@. @@@@@@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@@@@, @% %@&   @@@ &@@ @@ (@& @@ @@@ @@@ . %@@ /@  @@@@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@@@ %@@@@# #@@@ @@@ ,   (&@@* #   . @@@ @@@& *@@@@@ @@@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@% @@@@@ /@% %@@   @@@@ @@@@ *@@@@ @   @@@ /@& @@@@@ *@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@( @@@@(   @@@%  @% @@@@..@@@ &@@@ &@@@@  /@@@.  ,@@@@ .@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@% @@@@* @@@@   @@@@@ ,* (@@@@@%  .@@@@ /@   %@@@,.@@@@ *@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@ @@@@% #  /@, % ,@@& ,@@@@@@@@@@@@@(  /@@@@  @#  / ,@@@@ @", ConsoleColor.Yellow);
+            WriteText.WriteLine(" ,@@@@ @@@@@, @@@@, ,@@&*@@@@@@@@@/%@@# @@@,   @@@@@ @@@@# ", ConsoleColor.Yellow);
+            WriteText.WriteLine(" @@@@..@.    @@@@@ @@@* @ @@@@@@@ @, @@@  @@@@     &( @@@@ ", ConsoleColor.Yellow);
+            WriteText.WriteLine(" @@@@ @@@@@ (@@&. (@@@@@@% %@@@@ /@@@@@@& @@@@& @@@@@ @@@@            ══╗ ╔╗     ╔╗", ConsoleColor.Yellow);
+            WriteText.WriteLine(" @@@@ @@@%( @@@@@ @@@@@@@@@%   /@@@@@@@@@       /%@@@ @@@@,          ║══╬═╬╬═╦╦═╦╬╬═╦╦═╗", ConsoleColor.Yellow);
+            WriteText.WriteLine(" @@@@ @@@@& *.    @@@@@@@@@@   %@@@@@@@@@ @@@@@ &@@@@ @@@@,          ╠══║╬║║║║║║║║║║║║╬╠╦╦╦╗", ConsoleColor.Yellow);
+            WriteText.WriteLine(" @@@@ @@@@@ #@@@@ %@@@@@@@ /@@@% %@@@@@@@ *@@@@ @@@@@ @@@@           ╚══╣╔╩╩╩═╩╩═╩╩╩═╬╗╠╩╩╩╝", ConsoleColor.Yellow);
+            WriteText.WriteLine(" @@@@ ,@(    @@@@* @@@/ @ @@@@@@@ @. @@@ @@@@%    *@# @@@@              ╚╝           ╚═╝", ConsoleColor.Yellow);
+            WriteText.WriteLine(" *@@@@ @@@@@.   &@@ (@@( @@@@@@@@@ *@@& ,@@@@* @@@@@ @@@@% ", ConsoleColor.Yellow);
+            WriteText.WriteLine("@ @@@@( @   @  @@@@@  #@@@@@@@@@@@@@& *@@. &, @,  & .@@@@ @", ConsoleColor.Yellow);
+            WriteText.WriteLine("@( @@@@,.@@@@   @@ /@@@  .&@@@@@@.  , @@@@@   @@@@( @@@@ .@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@* @@@@*   @@@@  @@@@@ @@@@ @@@* @@@@ #@  %@@@    @@@@  @@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@( @@@@@ %@@ /@@   @ @@@@& @@@@ @@@@,  @@% %@@ &@@@@ .@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@@@ @@@@@( /@@@ %@@    ,&, @@@@,    @@@ @@@% ,@@@@@ &@@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@@@@  @@ /@% , @@@ #@@ @@ /@& @@ @@@ @@@ * /@% &@  @@@@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@@@@@@  @@@@@@. , /@@, @@ @@@ @@/ @@& (  @@@@@@* @@@@@@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@@@@@@@@  @@@@@@@@,   (@@ @@@ @@#   .@@@@@@@@  @@@@@@@@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@@@@@@@@@@@  @@@@@@@@@@@@@@ @@@@@@@@@@@@@@  &@@@@@@@@@@@@", ConsoleColor.Yellow);
+            WriteText.WriteLine("@@@@@@@@@@@@@@@@.  &@@@@@@@@@ @@@@@@@@@&   @@@@@@@@@@@@@@@@", ConsoleColor.Yellow);
+            Thread.Sleep(1500);
+            Console.Clear();
+            WriteText.WriteLine("@@@@@@@@@@@@@@@@@@@@@%               #@@@@@@@@@@@@@@@@@@@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@@@@@@@@@@@@@@(  /@@@@@@@@@ @@@@@@@@@(  *@@@@@@@@@@@@@@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@@@@@@@@@@@  #@@@@@@@@@@@@@ @@@@@@@@@@@@@&  @@@@@@@@@@@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@@@@@@@@. %@@@@@@@%   .%@ @@@ @%,   (@@@@@@@@  @@@@@@@@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@@@@@@  @@@@@@#   %@@..@@ @@@ @@( @@@ . *@@@@@@. @@@@@@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@@@@, @% %@&   @@@ &@@ @@ (@& @@ @@@ @@@ . %@@ /@  @@@@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@@@ %@@@@# #@@@ @@@ ,   (&@@* #   . @@@ @@@& *@@@@@ @@@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@% @@@@@ /@% %@@   @@@@ @@@@ *@@@@ @   @@@ /@& @@@@@ *@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@( @@@@(   @@@%  @% @@@@..@@@ &@@@ &@@@@  /@@@.  ,@@@@ .@@", ConsoleColor.Red);
+            WriteText.WriteLine("@% @@@@* @@@@   @@@@@ ,* (@@@@@%  .@@@@ /@   %@@@,.@@@@ *@", ConsoleColor.Red);
+            WriteText.WriteLine("@ @@@@% #  /@, % ,@@& ,@@@@@@@@@@@@@(  /@@@@  @#  / ,@@@@ @", ConsoleColor.Red);
+            WriteText.WriteLine(" ,@@@@ @@@@@, @@@@, ,@@&*@@@@@@@@@/%@@# @@@,   @@@@@ @@@@# ", ConsoleColor.Red);
+            WriteText.WriteLine(" @@@@..@.    @@@@@ @@@* @ @@@@@@@ @, @@@  @@@@     &( @@@@ ", ConsoleColor.Red);
+            WriteText.WriteLine(" @@@@ @@@@@ (@@&. (@@@@@@% %@@@@ /@@@@@@& @@@@& @@@@@ @@@@            ══╗ ╔╗     ╔╗", ConsoleColor.Red);
+            WriteText.WriteLine(" @@@@ @@@%( @@@@@ @@@@@@@@@%   /@@@@@@@@@       /%@@@ @@@@,          ║══╬═╬╬═╦╦═╦╬╬═╦╦═╗", ConsoleColor.Red);
+            WriteText.WriteLine(" @@@@ @@@@& *.    @@@@@@@@@@   %@@@@@@@@@ @@@@@ &@@@@ @@@@,          ╠══║╬║║║║║║║║║║║║╬╠╦╦╦╗", ConsoleColor.Red);
+            WriteText.WriteLine(" @@@@ @@@@@ #@@@@ %@@@@@@@ /@@@% %@@@@@@@ *@@@@ @@@@@ @@@@           ╚══╣╔╩╩╩═╩╩═╩╩╩═╬╗╠╩╩╩╝", ConsoleColor.Red);
+            WriteText.WriteLine(" @@@@ ,@(    @@@@* @@@/ @ @@@@@@@ @. @@@ @@@@%    *@# @@@@              ╚╝           ╚═╝", ConsoleColor.Red);
+            WriteText.WriteLine(" *@@@@ @@@@@.   &@@ (@@( @@@@@@@@@ *@@& ,@@@@* @@@@@ @@@@% ", ConsoleColor.Red);
+            WriteText.WriteLine("@ @@@@( @   @  @@@@@  #@@@@@@@@@@@@@& *@@. &, @,  & .@@@@ @", ConsoleColor.Red);
+            WriteText.WriteLine("@( @@@@,.@@@@   @@ /@@@  .&@@@@@@.  , @@@@@   @@@@( @@@@ .@", ConsoleColor.Red);
+            WriteText.WriteLine("@@* @@@@*   @@@@  @@@@@ @@@@ @@@* @@@@ #@  %@@@    @@@@  @@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@( @@@@@ %@@ /@@   @ @@@@& @@@@ @@@@,  @@% %@@ &@@@@ .@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@@@ @@@@@( /@@@ %@@    ,&, @@@@,    @@@ @@@% ,@@@@@ &@@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@@@@  @@ /@% , @@@ #@@ @@ /@& @@ @@@ @@@ * /@% &@  @@@@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@@@@@@  @@@@@@. , /@@, @@ @@@ @@/ @@& (  @@@@@@* @@@@@@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@@@@@@@@  @@@@@@@@,   (@@ @@@ @@#   .@@@@@@@@  @@@@@@@@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@@@@@@@@@@@  @@@@@@@@@@@@@@ @@@@@@@@@@@@@@  &@@@@@@@@@@@@", ConsoleColor.Red);
+            WriteText.WriteLine("@@@@@@@@@@@@@@@@.  &@@@@@@@@@ @@@@@@@@@&   @@@@@@@@@@@@@@@@", ConsoleColor.Red);
+            Thread.Sleep(1500);
+            Console.Clear();
+
+
         }
 
     }

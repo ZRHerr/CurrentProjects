@@ -11,7 +11,7 @@ namespace Roulette
     {
         public int StreetBet(int spin)
         {
-
+            WheelSpin wheel = new WheelSpin();
             int street;
             int rangeOfStreet;
             int winnings = 0;
@@ -19,8 +19,8 @@ namespace Roulette
             int[] red = { 1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36 };
             int[] black = { 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35 };
             int[] green = { 0, 37 };
-
-            WriteText.Write("To select a specific row of numbers please enter the lowest number in the street you wish to choose: ");
+            WriteText.WriteLine("Street Bet:", ConsoleColor.Yellow);
+            WriteText.Write("To select a specific row of numbers please enter the lowest number in the street you wish to choose: ",ConsoleColor.Red);
             street = Int32.Parse(Console.ReadLine());
             rangeOfStreet = street + 2;
 
@@ -32,6 +32,7 @@ namespace Roulette
             }
             if (bet <= Player.money)
             {
+                wheel.displayWheel();
                 Player.money = Player.money - bet;
                 if (red.Contains(spin))
                 {

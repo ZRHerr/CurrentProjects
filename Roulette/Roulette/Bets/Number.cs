@@ -11,13 +11,14 @@ namespace Roulette
     {
         public int NumbersBet(int spin)
         {
+            WheelSpin wheel = new WheelSpin();
             int bet = 0;
             int number = 0;
             int winnings = 0;
             int[] red = { 1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36 };
             int[] black = { 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35 };
             int[] green = { 0, 37 };
-
+            WriteText.WriteLine("Number Bet:", ConsoleColor.Yellow);
             WriteText.Write("Please enter the number you would like to bet on up to 36: ", ConsoleColor.Red);
             number = Int32.Parse(Console.ReadLine());
             WriteText.Write($"You have ${Player.money}. Please enter how much you would like to bet: ", ConsoleColor.Red);
@@ -28,6 +29,7 @@ namespace Roulette
             }
             if (bet <= Player.money)
             {
+                wheel.displayWheel();
                 Player.money = Player.money - bet;
 
                 if (red.Contains(spin))
