@@ -9,6 +9,7 @@ namespace SpaceGame
 {
     class Program
     {
+        //testsync
         static void Main(string[] args)
         {
             try
