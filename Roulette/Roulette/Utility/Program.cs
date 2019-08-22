@@ -14,6 +14,9 @@ namespace Roulette
         static void Main(string[] args)
         {
             Menus menu = new Menus();
+            Weather weather;
+            weather = new Weather();
+            weather.SetRealWeatherAsync();
             menu.DisplayTitle();
             Console.ReadLine();
             Console.Clear();
