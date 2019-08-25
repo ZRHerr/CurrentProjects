@@ -40,7 +40,7 @@ namespace BisectionAlgorithm
                 int num = input.userNum;
                 b.BisectionMethod(myArray, num);
 
-                Console.WriteLine("Would you like to try another number? type \"yes\" or \"no\"");
+                WriteText.WriteLine("Would you like to try another number? type \"yes\" or \"no\"");
                 string YesOrNo = Convert.ToString(Console.ReadLine());
                 if (YesOrNo.ToLower() == "yes")
                 {
@@ -53,7 +53,7 @@ namespace BisectionAlgorithm
                 }
                 else
                 {
-                    Console.WriteLine("Invalid Entry defaulting as yes, please next time enter yes or no");
+                    WriteText.WriteLine("Invalid Entry defaulting as yes, please next time enter yes or no");
                     Console.ReadLine();
                     Console.Clear();
                     tryagain = true;

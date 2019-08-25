@@ -72,7 +72,7 @@ namespace BisectionAlgorithm
             else if (HorizontalAligment == MenuHorizontalAligment.Center)
                 start = (Console.WindowWidth - text.Length) / 2;
             Console.CursorLeft = start;
-            Console.WriteLine(text);
+            WriteText.WriteLine(text);
         }
 
         private string GetPath()

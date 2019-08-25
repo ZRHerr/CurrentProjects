@@ -24,22 +24,22 @@ namespace BisectionAlgorithm
                 //Checks to see if the input falls within the small end of the array
                 if(Algorithm[MiddleNumber] > userNum)
                 {
-                    Console.WriteLine($"The current number range is {LeftSide+1}-{RightSide+1}");
+                    WriteText.WriteLine($"The current number range is {LeftSide+1}-{RightSide+1}",ConsoleColor.DarkYellow);
                     RightSide = MiddleNumber - 1;                    
-                    Console.WriteLine($"your number is less than the middle number: {MiddleNumber+1}\tThe next Numbers to check is: {LeftSide+1}-{RightSide+1}\n");
+                    WriteText.WriteLine($"your number is less than the middle number: {MiddleNumber+1}\tThe next Numbers to check is: {LeftSide+1}-{RightSide+1}\n",ConsoleColor.Yellow);
                 }
                 // Checks the input falling within the big end of the array
                 else if (Algorithm[MiddleNumber] < userNum)
                 {
-                    Console.WriteLine($"The current number range is {LeftSide+1}-{RightSide+1}");
+                    WriteText.WriteLine($"The current number range is {LeftSide+1}-{RightSide+1}",ConsoleColor.DarkYellow);
                     LeftSide = MiddleNumber + 1;
-                    Console.WriteLine($"your number is more than the middle number: {MiddleNumber+1}\tThe next Numbers to check is: {LeftSide + 1}-{RightSide + 1}\n");
+                    WriteText.WriteLine($"your number is more than the middle number: {MiddleNumber+1}\tThe next Numbers to check is: {LeftSide + 1}-{RightSide + 1}\n",ConsoleColor.Yellow);
 
                 }
                 // Last else returns the middle number to narrow down the search
                 else
                 {
-                    Console.WriteLine($"The Number fell in the middle of the above checked range your number was: {userNum}");
+                    WriteText.WriteLine($"The Number fell in the middle of the above checked range your number was: {userNum}",ConsoleColor.DarkGreen);
                     Console.ReadLine();
                     return MiddleNumber;
                 }

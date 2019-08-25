@@ -49,6 +49,7 @@
     <Compile Include="Menu\Enums.cs" />
     <Compile Include="Menu\Menu.cs" />
     <Compile Include="Menu\MenuItem.cs" />
+    <Compile Include="Menu\WriteText.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BisectInput.cs" />
