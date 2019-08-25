@@ -3,14 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BisectionAlgorithm;
 
 namespace BisectionAlgorithm
 {
     class Program
     {
+        static Menu menu;
+        
         static void Main(string[] args)
         {
             
+            menu = new Menu()
+            {
+                new MenuItem("BisectionAlgorithm", RunBisect),
+                new MenuItem("Guess the Computers Random Num:", RunHumanGuessing),
+                new MenuItem("Try to stump the computer", RunComputerGuessing),
+                new MenuItem("Exit", ()=> menu.Hide()),              
+            };
+            menu.ShowNavigationBar = true;
+            menu.CyclicScrolling = true;
+            menu.HorizontalAligment = MenuHorizontalAligment.Center;
+            menu.Show();
+            Console.ReadKey(true);
+        }
+
+        static void RunBisect()
+        {
             bool tryagain = false;
             do
             {
@@ -40,8 +59,24 @@ namespace BisectionAlgorithm
                     tryagain = true;
                 }
             } while (tryagain == true);
+            Console.ReadKey(true);
+            menu.Show();
+        }
 
+        static void RunHumanGuessing()
+        {
+            HumanGuessing h = new HumanGuessing();
+            h.Guess();
+            Console.ReadKey(true);
+            menu.Show();
+        }
 
+        static void RunComputerGuessing()
+        {
+            ComputerGuessing c = new ComputerGuessing();
+            c.Guess();
+            Console.ReadKey(true);
+            menu.Show();
         }
     }
 }

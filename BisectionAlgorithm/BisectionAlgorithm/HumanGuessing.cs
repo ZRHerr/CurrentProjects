@@ -24,7 +24,7 @@ namespace BisectionAlgorithm
                 try
                 {
                     Console.Clear();
-                    Console.Write($"This is your {attempts} attemp:\t Input your guess:");
+                    Console.WriteLine($"This is your {attempts} attemp:\t Input your guess:");
                     userGuess = Convert.ToInt32(Console.ReadLine());
                     if (userGuess > 0 && userGuess < 1001)
                     {
@@ -34,18 +34,21 @@ namespace BisectionAlgorithm
                         {
                             Console.WriteLine($"You got it!\n" +
                                 $"it only took you {attempts} attempts");
+                            Console.ReadLine();
                         }
                         //Checking to see if the number is higher than the computers random num
                         else if (userGuess > ComputerPick)
                         {
                             Console.WriteLine("Your number is higher than the computers pick, try a little lower\n");
                             attempts++;
+                            Console.ReadLine();
                         }
                         //Checking to see if its lower
                         else if (userGuess < ComputerPick)
                         {
                             Console.WriteLine("Your number is lower than the computers pick, try a little higher\n");
                             attempts++;
+                            Console.ReadLine();
                         }
                     }
                     else
