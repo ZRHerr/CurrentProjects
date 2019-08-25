@@ -39,7 +39,7 @@ namespace BisectionAlgorithm
                         else if (MiddleNumber < userNum)
                         {
                             LeftSide = MiddleNumber;
-                            Console.WriteLine($"The Compute guessed {MiddleNumber}: You explained your number was lower than that\n" +
+                            Console.WriteLine($"The Compute guessed {MiddleNumber}: You explained your number was higher than that\n" +
                                 $"now the computer knows the number is somewhere between {LeftSide}-{RightSide}");
                             ComputerAttempts++;
                         }
