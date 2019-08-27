@@ -44,7 +44,7 @@ namespace FinalProject.Controllers
 
             db.Users.Add(u);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index","Inbox");
 
         }
     }
