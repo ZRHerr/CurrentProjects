@@ -17,7 +17,7 @@ namespace FinalProject.ViewModels
         [MinLength(5), Required, DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [Compare("Password"), DataType(DataType.Password)]
+        [Compare("Password", ErrorMessage = "Passwords did not match"), DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
 
         [EmailAddress, Required]

@@ -40,12 +40,39 @@ namespace FinalProject.Controllers
             u.Email = obj.Email;
             u.ImageUrl = "";
             u.CreatedOn = DateTime.Now;
-            
+
 
             db.Users.Add(u);
             db.SaveChanges();
-            return RedirectToAction("Index","Inbox");
+            return RedirectToAction("Index", "Home");
 
+        }
+        public ActionResult Login()
+        {
+            Account account = new Account();
+            return View(account);
+        }
+        [HttpPost]
+        public ActionResult Login(Account obj)
+        {
+            if (ModelState.IsValid)
+            {
+                if (db.Users.Where(m => m.Username == obj.Username && m.Password == obj.Password).FirstOrDefault() == null)
+                {
+                    ModelState.AddModelError("Error", "Invalid Entries");
+                    return View();
+                }
+                else
+                {
+                    Session["Username"] = obj.Username;
+                }
+            }
+            return RedirectToAction("Index", "Home");
+        }
+        public ActionResult Logout()
+        {
+            Session.Abandon();
+            return RedirectToAction("Index","Home");
         }
     }
 }

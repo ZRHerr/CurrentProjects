@@ -1,0 +1,57 @@
+﻿@model FinalProject.ViewModels.Account
+
+@{ 
+    ViewBag.Title = "Login";
+
+}
+
+<fieldset>
+    <legend>
+        Login
+    </legend>
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+<table>
+    <tr>
+        <td>@Html.LabelFor(model => model.Username)</td>
+        <td>@Html.TextBoxFor(model => model.Username)</td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>@Html.ValidationMessageFor(model => model.Username, null, new { @class = "text text-danger" })</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Password)</td>
+        <td>@Html.TextBoxFor(model => model.Password)</td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>@Html.ValidationMessageFor(model => model.Password, null, new { @class = "text text-danger" })</td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        <input type="submit" value="Login" />
+                    </td>
+                    <td>
+                        <input type="reset" value="Reset" />
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            @Html.ValidationMessage("Error", null, new { @class = "text text-danger" });
+        </td>
+    </tr>
+</table>
+    }
+
+</fieldset>
