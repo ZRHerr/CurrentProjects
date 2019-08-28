@@ -16,6 +16,7 @@ namespace FinalProject.Controllers
         {
             return View();
         }
+        //Validating that the user information does not already exist
         [HttpPost]
         public ActionResult Register(Registration obj)
         {
@@ -52,6 +53,7 @@ namespace FinalProject.Controllers
             Account account = new Account();
             return View(account);
         }
+        //Validating the Login information to ensure it exists in the database or will display error
         [HttpPost]
         public ActionResult Login(Account obj)
         {

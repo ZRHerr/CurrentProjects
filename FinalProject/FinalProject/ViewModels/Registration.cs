@@ -10,10 +10,11 @@ namespace FinalProject.ViewModels
     public class Registration
     {
         //This data doesnt need to be compared with the data within the database
-        //The passwords should be compared to ensure password creation is what the user intended
+
         [Required, MinLength(5)]
         public string Username { get; set; }
 
+        //The passwords should be compared to ensure password creation is what the user intended
         [MinLength(5), Required, DataType(DataType.Password)]
         public string Password { get; set; }
 
