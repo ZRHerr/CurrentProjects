@@ -146,13 +146,11 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Images\allinone.jpg" />
     <Content Include="Content\Images\car.jpg" />
     <Content Include="Content\Images\sidbar.jpg" />
     <Content Include="Content\Images\support.png" />
     <Content Include="Content\light-bootstrap-dashboard.css" />
-    <Content Include="Content\pe-icon-7-stroke.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -160,7 +158,6 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\chartist.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />

@@ -14,22 +14,16 @@
     <!--  Light Bootstrap Table core CSS    -->
     <link href="~/Content/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet" />
 
-
-    <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="~/Content/pe-icon-7-stroke.css" rel="stylesheet" />
-    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
     <!-- Fontfaces CSS-->
     <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 <body>
     <div class="wrapper">
         <!--Cant get image to work TODO: look into this.-->
-        <div class="sidebar" data-image="~Content/Images/sidebar.jpg">
+        <div class="sidebar" data-color="blue" data-image="~Content/Images/sidebar.jpg">
 
-            <div class="sidebar-wrapper">
-
+            <div class="sidebar-wrapper" data-color="red">
+               
             </div>
         </div>
         <div class="main-panel">
@@ -45,13 +39,12 @@
                         <a class="navbar-brand" href="#">Dashboard</a>
                     </div>
                     <div class="collapse navbar-collapse">
-                        
+
                         @Html.Partial("_LoginPartial")
 
                     </div>
                 </div>
-            </nav>
-
+            </nav>            
             <div class="content">
                 <div class="container-fluid">
                     @RenderBody()
@@ -64,7 +57,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-    <script src="~/Admin/assets/js/chartist.min.js"></script>
     <script src="~/Admin/assets/js/bootstrap-notify.js"></script>
     <!-- TODO: Google Maps Plugin    -->
     @*<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>*@
