@@ -1666,7 +1666,9 @@ pre code {
 .col-xs-12,
 .col-sm-12,
 .col-md-12,
-.col-lg-12 {
+.col-lg-12 a:hover
+a:after{
+    color: #7777;
   position: relative;
   min-height: 1px;
   padding-right: 15px;
