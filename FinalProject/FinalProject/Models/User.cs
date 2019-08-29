@@ -21,6 +21,27 @@ namespace FinalProject.Models
         [EmailAddress, Index(IsUnique = true), Column(TypeName = "nvarchar"), Required]
         public string Email { get; set; }
 
+        [Required, Column(TypeName ="nvarchar")]
+        public string FirstName { get; set; }
+
+        [Required, Column(TypeName = "nvarchar")]
+        public string LastName { get; set; }
+
+        [Required, Column(TypeName = "nvarchar")]
+        public string StreetAddress { get; set; }
+
+        [Required, Column(TypeName = "nvarchar")]
+        public string City { get; set; }
+
+        [Required, Column(TypeName = "nvarchar")]
+        public string State { get; set; }
+
+        [Required, Column(TypeName = "nvarchar")]
+        public string ZipCode { get; set; }
+
+        [Required, Column(TypeName = "nvarchar")]
+        public string ContactNumber { get; set; }
+
         [ScaffoldColumn(false)]
         public string ImageUrl { get; set; }
 

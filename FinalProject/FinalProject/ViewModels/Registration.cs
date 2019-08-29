@@ -10,7 +10,7 @@ namespace FinalProject.ViewModels
     public class Registration
     {
         //This data doesnt need to be compared with the data within the database
-
+        
         [Required, MinLength(5)]
         public string Username { get; set; }
 
@@ -24,5 +24,25 @@ namespace FinalProject.ViewModels
         [EmailAddress, Required]
         public string Email { get; set; }
 
+        [Required, Column(TypeName = "nvarchar")]
+        public string FirstName { get; set; }
+
+        [Required, Column(TypeName = "nvarchar")]
+        public string LastName { get; set; }
+
+        [Required, Column(TypeName = "nvarchar")]
+        public string StreetAddress { get; set; }
+
+        [Required, Column(TypeName = "nvarchar")]
+        public string City { get; set; }
+
+        [Required, Column(TypeName = "nvarchar")]
+        public string State { get; set; }
+
+        [Required, Column(TypeName = "nvarchar")]
+        public string ZipCode { get; set; }
+
+        [Required, Column(TypeName = "nvarchar")]
+        public string ContactNumber { get; set; }
     }
 }

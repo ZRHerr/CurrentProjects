@@ -39,6 +39,13 @@ namespace FinalProject.Controllers
             u.Username = obj.Username;
             u.Password = obj.Password;
             u.Email = obj.Email;
+            u.FirstName = obj.FirstName;
+            u.LastName = obj.LastName;
+            u.StreetAddress = obj.StreetAddress;
+            u.City = obj.City;
+            u.State = obj.State;
+            u.ZipCode = obj.ZipCode;
+            u.ContactNumber = obj.ContactNumber;
             u.ImageUrl = "";
             u.CreatedOn = DateTime.Now;
 
