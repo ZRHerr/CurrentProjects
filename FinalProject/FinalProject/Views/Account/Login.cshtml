@@ -12,13 +12,13 @@
         {
             <table>
                 <tr>
-                    <td>@Html.LabelFor(model => model.Username)</td>
-                    <td>@Html.TextBoxFor(model => model.Username)</td>
+                    <td>@Html.LabelFor(model => model.UserName)</td>
+                    <td>@Html.TextBoxFor(model => model.UserName)</td>
                 </tr>
                 <tr>
                     <td>
                     </td>
-                    <td>@Html.ValidationMessageFor(model => model.Username, null, new { @class = "text text-danger" })</td>
+                    <td>@Html.ValidationMessageFor(model => model.UserName, null, new { @class = "text text-danger" })</td>
                 </tr>
                 <tr>
                     <td>@Html.LabelFor(model => model.Password)</td>

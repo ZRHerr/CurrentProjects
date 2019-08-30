@@ -7,17 +7,12 @@ using System.Web;
 
 namespace FinalProject.Models
 {
-    public class Reply
+    public class Chat
     {
-        [Key]
-        public int ReplyId { get; set; }
-
-        [Required]
-        public string Text { get; set; }
-
+        [Key]       
         public int MessageId { get; set; }
-
-        [ForeignKey("MessageId")]
-        public virtual Message Message { get; set; }
+        public string Subject { get; set; }
+        public string Text { get; set; }
+        public DateTime DateTime { get; set; }
     }
 }

@@ -14,9 +14,12 @@ namespace FinalProject.Models
         {
 
         }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Message> Messages { get; set; }
-        public DbSet<Reply> Replies { get; set; }
-
+        public DbSet<Customer> Users { get; set; }
+        public DbSet<Chat> Messages { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Parts> Parts { get; set; }
+        public DbSet<Reviews> Review { get; set; }
+        public DbSet<Services> Services { get; set; }
+        public DbSet<Vehicles> Vehicles { get; set; }
     }
 }

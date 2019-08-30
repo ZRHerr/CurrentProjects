@@ -20,7 +20,7 @@ namespace FinalProject.Controllers
         [HttpPost]
         public ActionResult Register(Registration obj)
         {
-            bool UserExists = db.Users.Any(x => x.Username == obj.Username);
+            bool UserExists = db.Users.Any(x => x.UserName == obj.UserName);
             if (UserExists)
             {
                 ViewBag.UsernameMessage = "This username is already in use, try another";
@@ -34,20 +34,22 @@ namespace FinalProject.Controllers
 
             //If the username and email are unique, the registered user will then be saved.
 
-            User u = new User();
-
-            u.Username = obj.Username;
-            u.Password = obj.Password;
-            u.Email = obj.Email;
-            u.FirstName = obj.FirstName;
-            u.LastName = obj.LastName;
-            u.StreetAddress = obj.StreetAddress;
-            u.City = obj.City;
-            u.State = obj.State;
-            u.ZipCode = obj.ZipCode;
-            u.ContactNumber = obj.ContactNumber;
-            u.ImageUrl = "";
-            u.CreatedOn = DateTime.Now;
+            Customer u = new Customer
+            {
+                UserName = obj.UserName,
+                Password = obj.Password,
+                Email = obj.Email,
+                FirstName = obj.FirstName,
+                LastName = obj.LastName,
+                StreetAddress1 = obj.StreetAddress1,
+                StreetAddress2 = obj.StreetAddress2,
+                City = obj.City,
+                State = obj.State,
+                Zip = obj.Zip,
+                ContactNumber = obj.ContactNumber,
+                Image = null,
+                DateCreated = DateTime.Now
+            };
 
 
             db.Users.Add(u);
@@ -66,14 +68,14 @@ namespace FinalProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (db.Users.Where(m => m.Username == obj.Username && m.Password == obj.Password).FirstOrDefault() == null)
+                if (db.Users.Where(m => m.UserName == obj.UserName && m.Password == obj.Password).FirstOrDefault() == null)
                 {
                     ModelState.AddModelError("Error", "Invalid Entries");
                     return View();
                 }
                 else
                 {
-                    Session["Username"] = obj.Username;
+                    Session["UserName"] = obj.UserName;
                 }
             }
             return RedirectToAction("Index", "Home");
