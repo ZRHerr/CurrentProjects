@@ -8,8 +8,4 @@
 --Pride and joy application // Idea I would like to continue to build upon and possibly publish one day.
 **any help or ideas would be greatly appreciated**
 # TODO
-Would like to create a (timelapse) animation of a wheel spinning on the roulette game. 
-\n need to clean up roulette menu
-\n need to add complexity(difficulty) to the space game
-\n create more casino games and compile into one menu.
-
+Starting ASP.NET MVC .net framework project for my web app idea.
