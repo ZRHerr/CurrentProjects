@@ -1,4 +1,5 @@
-﻿using MyApp.Core.Models;
+﻿using MyApp.Core.Contracts;
+using MyApp.Core.Models;
 using MyApp.DataAccess.InMemory;
 using System;
 using System.Collections.Generic;
@@ -10,10 +11,10 @@ namespace MyApp.WebUI.Controllers
 {
     public class ReviewGroupController : Controller
     {
-        InMemoryRepository<ReviewGroup> context;
-        public ReviewGroupController()
+        IRepository<ReviewGroup> context;
+        public ReviewGroupController(IRepository<ReviewGroup> reviewGroupContext)
         {
-            context = new InMemoryRepository<ReviewGroup>();
+            context = reviewGroupContext;
         }
         // GET: ReviewManager
         public ActionResult Index()

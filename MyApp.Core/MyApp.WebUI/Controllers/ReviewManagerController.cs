@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MyApp.Core.Contracts;
 using MyApp.Core.Models;
 using MyApp.Core.ViewModels;
 using MyApp.DataAccess.InMemory;
@@ -11,12 +12,12 @@ namespace MyApp.WebUI.Controllers
 {
     public class ReviewManagerController : Controller
     {
-        InMemoryRepository<Review> context;
-        InMemoryRepository<ReviewGroup> reviewGroups;
-        public ReviewManagerController()
-        {
-            context = new InMemoryRepository<Review>();
-            reviewGroups = new InMemoryRepository<ReviewGroup>();
+        IRepository<Review> context;
+        IRepository<ReviewGroup> reviewGroups;
+        public ReviewManagerController(IRepository<Review> reviewContext, IRepository<ReviewGroup> reviewGroupsContext)
+        {           
+            context = reviewContext;
+            reviewGroups = reviewGroupsContext;
         }
         // GET: ReviewManager
         public ActionResult Index()

@@ -1,4 +1,5 @@
-﻿using MyApp.Core.Models;
+﻿using MyApp.Core.Contracts;
+using MyApp.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyApp.DataAccess.InMemory
 {
-    public class InMemoryRepository<Repo> where Repo : BaseEntity
+    public class InMemoryRepository<Repo> : IRepository<Repo> where Repo : BaseEntity
     {
 
         //memory cache
@@ -21,7 +22,7 @@ namespace MyApp.DataAccess.InMemory
         {
             className = typeof(Repo).Name;
             items = cache[className] as List<Repo>;
-            if(items==null)
+            if (items == null)
             {
                 items = new List<Repo>();
             }
@@ -40,7 +41,7 @@ namespace MyApp.DataAccess.InMemory
         public void Update(Repo repo)
         {
             Repo repoToUpdate = items.Find(i => i.Id == repo.Id);
-            if(repoToUpdate != null)
+            if (repoToUpdate != null)
             {
                 repoToUpdate = repo;
             }
@@ -68,7 +69,7 @@ namespace MyApp.DataAccess.InMemory
         public void Delete(string Id)
         {
             Repo repoToDelete = items.Find(i => i.Id == Id);
-            if(repoToDelete != null)
+            if (repoToDelete != null)
             {
                 items.Remove(repoToDelete);
             }
@@ -78,5 +79,6 @@ namespace MyApp.DataAccess.InMemory
             }
 
         }
+
     }
 }
