@@ -11,12 +11,12 @@ namespace MyApp.WebUI.Controllers
 {
     public class ReviewManagerController : Controller
     {
-        ReviewRepository context;
-        ReviewGroupRepository reviewGroups;
+        InMemoryRepository<Review> context;
+        InMemoryRepository<ReviewGroup> reviewGroups;
         public ReviewManagerController()
         {
-            context = new ReviewRepository();
-            reviewGroups = new ReviewGroupRepository();
+            context = new InMemoryRepository<Review>();
+            reviewGroups = new InMemoryRepository<ReviewGroup>();
         }
         // GET: ReviewManager
         public ActionResult Index()

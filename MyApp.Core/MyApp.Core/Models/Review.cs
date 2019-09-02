@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace MyApp.Core.Models
 {
-    public class Review
+    public class Review : BaseEntity
     {
-        public string Id { get; set; }
-
         [Range(0,5)]
         public string Rating { get; set; }
         public string Text { get; set; }
