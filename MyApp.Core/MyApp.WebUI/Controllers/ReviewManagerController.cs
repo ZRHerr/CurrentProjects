@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MyApp.Core.Models;
-using MyApp.Core.ViewModels;
 using MyApp.DataAccess.InMemory;
 
 namespace MyApp.WebUI.Controllers
@@ -12,11 +11,9 @@ namespace MyApp.WebUI.Controllers
     public class ReviewManagerController : Controller
     {
         ReviewRepository context;
-        ReviewGroupRepository reviewGroups;
         public ReviewManagerController()
         {
             context = new ReviewRepository();
-            reviewGroups = new ReviewGroupRepository();
         }
         // GET: ReviewManager
         public ActionResult Index()
@@ -26,10 +23,8 @@ namespace MyApp.WebUI.Controllers
         }
         public ActionResult Create()
         {
-            ReviewManagerViewModel viewModel = new ReviewManagerViewModel();
-            viewModel.Review = new Review();
-            viewModel.ReviewGroups = reviewGroups.Collection();
-            return View(viewModel);
+            Review review = new Review();
+            return View(review);
         }
 
         [HttpPost]
@@ -57,10 +52,7 @@ namespace MyApp.WebUI.Controllers
             }
             else
             {
-                ReviewManagerViewModel viewModel = new ReviewManagerViewModel();
-                viewModel.Review = review;
-                viewModel.ReviewGroups = reviewGroups.Collection();
-                return View(viewModel);
+                return View(review);
             }
         }
 
