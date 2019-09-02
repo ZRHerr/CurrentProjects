@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace MyApp.Core.Models
 {
-    public class ServiceGroup : BaseEntity
+    public class ReviewGroup
     {
-        public string ServiceType { get; set; }
+        public string Id { get; set; }
+        public string Rating { get; set; }
 
+        public ReviewGroup()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
     }
 }
