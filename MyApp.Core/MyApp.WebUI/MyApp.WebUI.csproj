@@ -173,7 +173,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\ReviewGroupController.cs" />
     <Compile Include="Controllers\ReviewManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -244,12 +243,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\ReviewManager\Index.cshtml" />
     <Content Include="Views\ReviewManager\Create.cshtml" />
-    <Content Include="Views\ReviewManager\Delete.cshtml" />
-    <Content Include="Views\ReviewGroup\Index.cshtml" />
-    <Content Include="Views\ReviewGroup\Create.cshtml" />
-    <Content Include="Views\ReviewGroup\Edit.cshtml" />
-    <Content Include="Views\ReviewGroup\Delete.cshtml" />
     <Content Include="Views\ReviewManager\Edit.cshtml" />
+    <Content Include="Views\ReviewManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

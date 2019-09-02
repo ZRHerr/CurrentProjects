@@ -12,7 +12,7 @@ namespace MyApp.Core.Models
         public string Id { get; set; }
 
         [Range(0,5)]
-        public string Rating { get; set; }
+        public int Rating { get; set; }
         public string Text { get; set; }
     }
 }
