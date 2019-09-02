@@ -1,5 +1,4 @@
-﻿using MyApp.Core.Contracts;
-using MyApp.Core.Models;
+﻿using MyApp.Core.Models;
 using MyApp.DataAccess.InMemory;
 using System;
 using System.Collections.Generic;
@@ -9,35 +8,35 @@ using System.Web.Mvc;
 
 namespace MyApp.WebUI.Controllers
 {
-    public class ServiceGroupController : Controller
+    public class ReviewGroupController : Controller
     {
-        IRepository<ServiceGroup> context;
-        public ServiceGroupController(IRepository<ServiceGroup> serviceGroupContext)
+        InMemoryRepository<ReviewGroup> context;
+        public ReviewGroupController()
         {
-            context = serviceGroupContext;
+            context = new InMemoryRepository<ReviewGroup>();
         }
-        // GET: ServiceManager
+        // GET: ReviewManager
         public ActionResult Index()
         {
-            List<ServiceGroup> serviceGroups = context.Collection().ToList();
-            return View(serviceGroups);
+            List<ReviewGroup> reviewGroups = context.Collection().ToList();
+            return View(reviewGroups);
         }
         public ActionResult Create()
         {
-            ServiceGroup serviceGroup = new ServiceGroup();
-            return View(serviceGroup);
+            ReviewGroup reviewGroup = new ReviewGroup();
+            return View(reviewGroup);
         }
 
         [HttpPost]
-        public ActionResult Create(ServiceGroup serviceGroup)
+        public ActionResult Create(ReviewGroup reviewGroup)
         {
             if (!ModelState.IsValid)
             {
-                return View(serviceGroup);
+                return View(reviewGroup);
             }
             else
             {
-                context.Insert(serviceGroup);
+                context.Insert(reviewGroup);
                 context.Commit();
 
                 return RedirectToAction("Index");
@@ -46,22 +45,22 @@ namespace MyApp.WebUI.Controllers
 
         public ActionResult Edit(string Id)
         {
-            ServiceGroup serviceGroup = context.Find(Id);
-            if (serviceGroup == null)
+            ReviewGroup reviewGroup = context.Find(Id);
+            if (reviewGroup == null)
             {
                 return HttpNotFound();
             }
             else
             {
-                return View(serviceGroup);
+                return View(reviewGroup);
             }
         }
 
         [HttpPost]
-        public ActionResult Edit(ServiceGroup serviceGroup, string Id)
+        public ActionResult Edit(ReviewGroup reviewGroup, string Id)
         {
-            ServiceGroup serviceGroupToEdit = context.Find(Id);
-            if (serviceGroup == null)
+            ReviewGroup reviewGroupToEdit = context.Find(Id);
+            if (reviewGroup == null)
             {
                 return HttpNotFound();
             }
@@ -69,9 +68,9 @@ namespace MyApp.WebUI.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    return View(serviceGroup);
+                    return View(reviewGroup);
                 }
-                serviceGroupToEdit.ServiceType = serviceGroup.ServiceType;
+                reviewGroupToEdit.Rating = reviewGroup.Rating;
 
                 context.Commit();
 
@@ -81,14 +80,14 @@ namespace MyApp.WebUI.Controllers
 
         public ActionResult Delete(string Id)
         {
-            ServiceGroup serviceGroupToDelete = context.Find(Id);
-            if (serviceGroupToDelete == null)
+            ReviewGroup reviewGroupToDelete = context.Find(Id);
+            if (reviewGroupToDelete == null)
             {
                 return HttpNotFound();
             }
             else
             {
-                return View(serviceGroupToDelete);
+                return View(reviewGroupToDelete);
             }
         }
 
@@ -96,8 +95,8 @@ namespace MyApp.WebUI.Controllers
         [ActionName("Delete")]
         public ActionResult ConfirmDelete(string Id)
         {
-            ServiceGroup serviceGroupToDelete = context.Find(Id);
-            if (serviceGroupToDelete == null)
+            ReviewGroup reviewGroupToDelete = context.Find(Id);
+            if (reviewGroupToDelete == null)
             {
                 return HttpNotFound();
             }
