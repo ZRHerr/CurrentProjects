@@ -10,39 +10,39 @@ using MyApp.DataAccess.InMemory;
 
 namespace MyApp.WebUI.Controllers
 {
-    public class ReviewManagerController : Controller
+    public class ServiceManagerController : Controller
     {
-        IRepository<Review> context;
-        IRepository<ReviewGroup> reviewGroups;
-        public ReviewManagerController(IRepository<Review> reviewContext, IRepository<ReviewGroup> reviewGroupsContext)
+        IRepository<Service> context;
+        IRepository<ServiceGroup> serviceGroups;
+        public ServiceManagerController(IRepository<Service> serviceContext, IRepository<ServiceGroup> serviceGroupsContext)
         {           
-            context = reviewContext;
-            reviewGroups = reviewGroupsContext;
+            context = serviceContext;
+            serviceGroups = serviceGroupsContext;
         }
-        // GET: ReviewManager
+        // GET: ServiceManager
         public ActionResult Index()
         {
-            List<Review> reviews = context.Collection().ToList();
-            return View(reviews);
+            List<Service> Services = context.Collection().ToList();
+            return View(Services);
         }
         public ActionResult Create()
         {
-            ReviewManagerViewModel viewModel = new ReviewManagerViewModel();
-            viewModel.Review = new Review();
-            viewModel.ReviewGroups = reviewGroups.Collection();
+            ServiceManagerViewModel viewModel = new ServiceManagerViewModel();
+            viewModel.Service = new Service();
+            viewModel.ServiceGroups = serviceGroups.Collection();
             return View(viewModel);
         }
 
         [HttpPost]
-        public ActionResult Create(Review review)
+        public ActionResult Create(Service Service)
         {
             if(!ModelState.IsValid)
             {
-                return View(review);
+                return View(Service);
             }
             else
             {
-                context.Insert(review);
+                context.Insert(Service);
                 context.Commit();
 
                 return RedirectToAction("Index");
@@ -51,25 +51,25 @@ namespace MyApp.WebUI.Controllers
 
         public ActionResult Edit(string Id)
         {
-            Review review = context.Find(Id);
-            if(review == null)
+            Service Service = context.Find(Id);
+            if(Service == null)
             {
                 return HttpNotFound();
             }
             else
             {
-                ReviewManagerViewModel viewModel = new ReviewManagerViewModel();
-                viewModel.Review = review;
-                viewModel.ReviewGroups = reviewGroups.Collection();
+                ServiceManagerViewModel viewModel = new ServiceManagerViewModel();
+                viewModel.Service = Service;
+                viewModel.ServiceGroups = serviceGroups.Collection();
                 return View(viewModel);
             }
         }
 
         [HttpPost]
-        public ActionResult Edit(Review review, string Id)
+        public ActionResult Edit(Service Service, string Id)
         {
-            Review reviewToEdit = context.Find(Id);
-            if (review == null)
+            Service serviceToEdit = context.Find(Id);
+            if (Service == null)
             {
                 return HttpNotFound();
             }
@@ -77,10 +77,11 @@ namespace MyApp.WebUI.Controllers
             {
                 if(!ModelState.IsValid)
                 {
-                    return View(review);
+                    return View(Service);
                 }
-                reviewToEdit.Rating = review.Rating;
-                reviewToEdit.Text = review.Text;
+                serviceToEdit.ServiceType = Service.ServiceType;
+                serviceToEdit.ServiceDate = Service.ServiceDate;
+                serviceToEdit.ServiceDetails = Service.ServiceDetails;
 
                 context.Commit();
 
@@ -90,14 +91,14 @@ namespace MyApp.WebUI.Controllers
 
         public ActionResult Delete(string Id)
         {
-            Review reviewToDelete = context.Find(Id);
-            if (reviewToDelete == null)
+            Service serviceToDelete = context.Find(Id);
+            if (serviceToDelete == null)
             {
                 return HttpNotFound();
             }
             else
             {
-                return View(reviewToDelete);
+                return View(serviceToDelete);
             }
         }
 
@@ -105,8 +106,8 @@ namespace MyApp.WebUI.Controllers
         [ActionName("Delete")]
         public ActionResult ConfirmDelete(string Id)
         {
-            Review reviewToDelete = context.Find(Id);
-            if (reviewToDelete == null)
+            Service serviceToDelete = context.Find(Id);
+            if (serviceToDelete == null)
             {
                 return HttpNotFound();
             }

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace MyApp.Core.ViewModels
 {
-    public class ReviewManagerViewModel
+    public class ServiceManagerViewModel
     {
-        public Review Review { get; set; }
-        public IEnumerable<ReviewGroup> ReviewGroups { get; set; }
+        public Service Service { get; set; }
+        public IEnumerable<ServiceGroup> ServiceGroups { get; set; }
     }
 }

@@ -9,35 +9,35 @@ using System.Web.Mvc;
 
 namespace MyApp.WebUI.Controllers
 {
-    public class ReviewGroupController : Controller
+    public class ServiceGroupController : Controller
     {
-        IRepository<ReviewGroup> context;
-        public ReviewGroupController(IRepository<ReviewGroup> reviewGroupContext)
+        IRepository<ServiceGroup> context;
+        public ServiceGroupController(IRepository<ServiceGroup> serviceGroupContext)
         {
-            context = reviewGroupContext;
+            context = serviceGroupContext;
         }
-        // GET: ReviewManager
+        // GET: ServiceManager
         public ActionResult Index()
         {
-            List<ReviewGroup> reviewGroups = context.Collection().ToList();
-            return View(reviewGroups);
+            List<ServiceGroup> serviceGroups = context.Collection().ToList();
+            return View(serviceGroups);
         }
         public ActionResult Create()
         {
-            ReviewGroup reviewGroup = new ReviewGroup();
-            return View(reviewGroup);
+            ServiceGroup serviceGroup = new ServiceGroup();
+            return View(serviceGroup);
         }
 
         [HttpPost]
-        public ActionResult Create(ReviewGroup reviewGroup)
+        public ActionResult Create(ServiceGroup serviceGroup)
         {
             if (!ModelState.IsValid)
             {
-                return View(reviewGroup);
+                return View(serviceGroup);
             }
             else
             {
-                context.Insert(reviewGroup);
+                context.Insert(serviceGroup);
                 context.Commit();
 
                 return RedirectToAction("Index");
@@ -46,22 +46,22 @@ namespace MyApp.WebUI.Controllers
 
         public ActionResult Edit(string Id)
         {
-            ReviewGroup reviewGroup = context.Find(Id);
-            if (reviewGroup == null)
+            ServiceGroup serviceGroup = context.Find(Id);
+            if (serviceGroup == null)
             {
                 return HttpNotFound();
             }
             else
             {
-                return View(reviewGroup);
+                return View(serviceGroup);
             }
         }
 
         [HttpPost]
-        public ActionResult Edit(ReviewGroup reviewGroup, string Id)
+        public ActionResult Edit(ServiceGroup serviceGroup, string Id)
         {
-            ReviewGroup reviewGroupToEdit = context.Find(Id);
-            if (reviewGroup == null)
+            ServiceGroup serviceGroupToEdit = context.Find(Id);
+            if (serviceGroup == null)
             {
                 return HttpNotFound();
             }
@@ -69,9 +69,9 @@ namespace MyApp.WebUI.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    return View(reviewGroup);
+                    return View(serviceGroup);
                 }
-                reviewGroupToEdit.Rating = reviewGroup.Rating;
+                serviceGroupToEdit.ServiceType = serviceGroup.ServiceType;
 
                 context.Commit();
 
@@ -81,14 +81,14 @@ namespace MyApp.WebUI.Controllers
 
         public ActionResult Delete(string Id)
         {
-            ReviewGroup reviewGroupToDelete = context.Find(Id);
-            if (reviewGroupToDelete == null)
+            ServiceGroup serviceGroupToDelete = context.Find(Id);
+            if (serviceGroupToDelete == null)
             {
                 return HttpNotFound();
             }
             else
             {
-                return View(reviewGroupToDelete);
+                return View(serviceGroupToDelete);
             }
         }
 
@@ -96,8 +96,8 @@ namespace MyApp.WebUI.Controllers
         [ActionName("Delete")]
         public ActionResult ConfirmDelete(string Id)
         {
-            ReviewGroup reviewGroupToDelete = context.Find(Id);
-            if (reviewGroupToDelete == null)
+            ServiceGroup serviceGroupToDelete = context.Find(Id);
+            if (serviceGroupToDelete == null)
             {
                 return HttpNotFound();
             }

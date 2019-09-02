@@ -1,6 +1,7 @@
 using MyApp.Core.Contracts;
 using MyApp.Core.Models;
 using MyApp.DataAccess.InMemory;
+using MyApp.DataAccess.SQL;
 using System;
 
 using Unity;
@@ -45,8 +46,8 @@ namespace MyApp.WebUI
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
-            container.RegisterType<IRepository<Review>, InMemoryRepository<Review>>();
-            container.RegisterType<IRepository<ReviewGroup>, InMemoryRepository<ReviewGroup>>();
+            container.RegisterType<IRepository<Service>, SQLRepository<Service>>();
+            container.RegisterType<IRepository<ServiceGroup>, SQLRepository<ServiceGroup>>();
         }
     }
 }

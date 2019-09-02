@@ -16,7 +16,7 @@ namespace MyApp.DataAccess.SQL
 
         }
 
-        public DbSet<Review> Reviews { get; set; }
-        public DbSet<ReviewGroup> reviewGroup { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<ServiceGroup> ServiceGroups { get; set; }
     }
 }

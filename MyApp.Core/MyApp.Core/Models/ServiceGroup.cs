@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MyApp.Core.Models
 {
-    public class ReviewGroup : BaseEntity
+    public class ServiceGroup : BaseEntity
     {
-        public string Rating { get; set; }
+        public string ServiceType { get; set; }
 
     }
 }

@@ -264,8 +264,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\ReviewGroupController.cs" />
-    <Compile Include="Controllers\ReviewManagerController.cs" />
+    <Compile Include="Controllers\ServiceGroupController.cs" />
+    <Compile Include="Controllers\ServiceManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -333,14 +333,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\ReviewManager\Index.cshtml" />
-    <Content Include="Views\ReviewManager\Create.cshtml" />
-    <Content Include="Views\ReviewManager\Delete.cshtml" />
-    <Content Include="Views\ReviewGroup\Index.cshtml" />
-    <Content Include="Views\ReviewGroup\Create.cshtml" />
-    <Content Include="Views\ReviewGroup\Edit.cshtml" />
-    <Content Include="Views\ReviewGroup\Delete.cshtml" />
-    <Content Include="Views\ReviewManager\Edit.cshtml" />
+    <Content Include="Views\ServiceManager\Index.cshtml" />
+    <Content Include="Views\ServiceManager\Create.cshtml" />
+    <Content Include="Views\ServiceManager\Delete.cshtml" />
+    <Content Include="Views\ServiceGroup\Index.cshtml" />
+    <Content Include="Views\ServiceGroup\Create.cshtml" />
+    <Content Include="Views\ServiceGroup\Edit.cshtml" />
+    <Content Include="Views\ServiceGroup\Delete.cshtml" />
+    <Content Include="Views\ServiceManager\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
