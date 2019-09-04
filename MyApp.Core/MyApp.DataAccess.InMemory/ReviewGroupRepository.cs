@@ -1,5 +1,4 @@
-﻿using MyApp.Core.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Caching;
@@ -8,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace MyApp.DataAccess.InMemory
 {
-    public class ReviewGroupRepository
+    public class ReviewGroups
     {
         ObjectCache cache = MemoryCache.Default;
-        List<ReviewGroup> reviewGroups;
+        List<ReviewGroups> reviewGroups;
 
-        public ReviewGroupRepository()
+        public ReviewGroups()
         {
             //checking the cache for reviews
-            reviewGroups = cache["reviewGroups"] as List<ReviewGroup>;
+            reviewGroups = cache["reviewGroups"] as List<ReviewGroups>;
             if (reviewGroups == null)
             {
-                reviewGroups = new List<ReviewGroup>();
+                reviewGroups = new List<ReviewGroups>();
             }
         }
 
@@ -30,14 +29,14 @@ namespace MyApp.DataAccess.InMemory
         }
 
         //list functionality
-        public void Insert(ReviewGroup rg)
+        public void Insert(ReviewGroups rg)
         {
             reviewGroups.Add(rg);
         }
-        public void Update(ReviewGroup reviewGroup)
+        public void Update(ReviewGroups reviewGroup)
         {
             //looking in database to find the product that is to be updated
-            ReviewGroup reviewGroupToUpdate = reviewGroups.Find(rg => rg.Id == reviewGroup.Id);
+            ReviewGroups reviewGroupToUpdate = reviewGroups.Find(rg => rg.Id == reviewGroup.Id);
 
             if (reviewGroupToUpdate != null)
             {
@@ -48,9 +47,9 @@ namespace MyApp.DataAccess.InMemory
                 throw new Exception("No reviews found");
             }
         }
-        public ReviewGroup Find(string Id)
+        public ReviewGroups Find(string Id)
         {
-            ReviewGroup reviewGroup = reviewGroups.Find(rg => rg.Id == Id);
+            ReviewGroups reviewGroup = reviewGroups.Find(rg => rg.Id == Id);
 
             if (reviewGroup != null)
             {
@@ -63,14 +62,14 @@ namespace MyApp.DataAccess.InMemory
         }
 
         //return a list of reviews that can be queried
-        public IQueryable<ReviewGroup> Collection()
+        public IQueryable<ReviewGroups> Collection()
         {
             return reviewGroups.AsQueryable();
         }
 
         public void Delete(string Id)
         {
-            ReviewGroup reviewGroupToDelete = reviewGroups.Find(r => r.Id == Id);
+            ReviewGroups reviewGroupToDelete = reviewGroups.Find(r => r.Id == Id);
 
             if (reviewGroupToDelete != null)
             {
