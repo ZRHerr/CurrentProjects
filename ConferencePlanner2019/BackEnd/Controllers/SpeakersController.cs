@@ -19,14 +19,14 @@ namespace BackEnd.Controllers
         {
             _context = context;
         }
-
+        // getting the list of speakers and returning them
         // GET: api/Speakers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Speaker>>> GetSpeakers()
         {
             return await _context.Speakers.ToListAsync();
         }
-
+        // getting a specific speaker
         // GET: api/Speakers/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Speaker>> GetSpeaker(int id)
@@ -40,7 +40,7 @@ namespace BackEnd.Controllers
 
             return speaker;
         }
-
+        //Updating the speaker
         // PUT: api/Speakers/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSpeaker(int id, Speaker speaker)
