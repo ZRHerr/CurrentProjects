@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.DependencyInjection;
-using BackEnd.Data;
 
 namespace BackEnd.Data
 {
@@ -26,7 +25,7 @@ namespace BackEnd.Data
 
             // Ignore the computed property
             modelBuilder.Entity<Session>()
-                 .Ignore(s => s.Duration);
+                .Ignore(s => s.Duration);
 
             // Many-to-many: Conference <-> Attendee
             modelBuilder.Entity<ConferenceAttendee>()
@@ -38,7 +37,7 @@ namespace BackEnd.Data
 
             // Many-to-many: Speaker <-> Session
             modelBuilder.Entity<SessionSpeaker>()
-               .HasKey(ss => new { ss.SessionId, ss.SpeakerId });
+                .HasKey(ss => new { ss.SessionId, ss.SpeakerId });
 
             // Many-to-many: Session <-> Tag
             modelBuilder.Entity<SessionTag>()
