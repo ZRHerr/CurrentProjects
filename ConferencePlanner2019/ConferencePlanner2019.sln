@@ -8,6 +8,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConferenceDTO", "ConferenceDTO\ConferenceDTO.csproj", "{AFCAE882-C4FE-40FA-B7CA-D805E1D39311}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontEnd", "FrontEnd\FrontEnd.csproj", "{16ABF780-B57C-43D3-997C-D77EEED996A6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ADEC82FD-4CFD-46E2-AE26-C871C40CEF71} = {ADEC82FD-4CFD-46E2-AE26-C871C40CEF71}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

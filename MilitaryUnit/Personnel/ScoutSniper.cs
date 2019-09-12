@@ -8,15 +8,10 @@ namespace MilitaryUnit
 {
     class ScoutSniper : People, IWeaponAssignment
     {
-        Random rnd = new Random();
         public ScoutSniper()
         {
-            int rndName = rnd.Next(0, personFirstName.Length - 1);
-            int rndRank = rnd.Next(0, rank.Length - 1);
-            string sniperrank = rank.ElementAt(rndRank);
-            string sniperfirst = personFirstName.ElementAt(rndName);
-            string sniperlast = personLastName.ElementAt(rndName);
-            Console.WriteLine($"Welome{sniperrank},{sniperfirst},{sniperlast} from scout snipers to the team");
+            Console.WriteLine($"Welome");
+            SelectPeople();
             WeaponAssignment();
         }
         public override void Train(string a)
@@ -26,11 +21,11 @@ namespace MilitaryUnit
         public void WeaponAssignment()
         {
            BarrettM82 m82 = new BarrettM82();
-            Console.WriteLine($"The Weapon you will have is a {m82.weaponName}", ConsoleColor.Yellow);
-            Console.WriteLine($"Your weapon is a {m82.weaponType}", ConsoleColor.Yellow);
-            Console.WriteLine($"The weapon uses{m82.weaponAmmo}", ConsoleColor.Yellow);
-            Console.WriteLine($"It fires {m82.weaponFireRate}", ConsoleColor.Yellow);
-            Console.WriteLine($"Its Damage Level is {m82.weaponDamage}", ConsoleColor.Yellow);
+            Console.WriteLine($"The Weapon you will have is a {m82.WeaponName}", ConsoleColor.Yellow);
+            Console.WriteLine($"Your Weapon is a {m82.WeaponType}", ConsoleColor.Yellow);
+            Console.WriteLine($"The Weapon uses{m82.WeaponAmmo}", ConsoleColor.Yellow);
+            Console.WriteLine($"It fires {m82.WeaponFireRate}", ConsoleColor.Yellow);
+            Console.WriteLine($"Its Damage Level is {m82.WeaponDamage}", ConsoleColor.Yellow);
         }
     }
 }

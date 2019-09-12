@@ -11,8 +11,7 @@ namespace BackEnd
     public class SessionizeLoader : DataLoader
     {
         public override async Task LoadDataAsync(string conferenceName, Stream fileStream, ApplicationDbContext db)
-        {
-            //var blah = new RootObject().rooms[0].sessions[0].speakers[0].name;
+        {           
 
             var addedSpeakers = new Dictionary<string, Speaker>();
             var addedTracks = new Dictionary<string, Track>();

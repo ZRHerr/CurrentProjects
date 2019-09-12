@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BackEnd.Migrations
@@ -12,7 +13,7 @@ namespace BackEnd.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     FirstName = table.Column<string>(maxLength: 200, nullable: false),
                     LastName = table.Column<string>(maxLength: 200, nullable: false),
                     UserName = table.Column<string>(maxLength: 200, nullable: false),
@@ -28,7 +29,7 @@ namespace BackEnd.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(maxLength: 200, nullable: false)
                 },
                 constraints: table =>
@@ -41,7 +42,7 @@ namespace BackEnd.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(maxLength: 32, nullable: false)
                 },
                 constraints: table =>
@@ -78,7 +79,7 @@ namespace BackEnd.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(maxLength: 200, nullable: false),
                     Bio = table.Column<string>(maxLength: 4000, nullable: true),
                     WebSite = table.Column<string>(maxLength: 1000, nullable: true),
@@ -100,7 +101,7 @@ namespace BackEnd.Migrations
                 columns: table => new
                 {
                     TrackID = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ConferenceID = table.Column<int>(nullable: false),
                     Name = table.Column<string>(maxLength: 200, nullable: false)
                 },
@@ -120,7 +121,7 @@ namespace BackEnd.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ConferenceID = table.Column<int>(nullable: false),
                     Title = table.Column<string>(maxLength: 200, nullable: false),
                     Abstract = table.Column<string>(maxLength: 4000, nullable: true),

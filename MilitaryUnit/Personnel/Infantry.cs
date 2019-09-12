@@ -8,15 +8,10 @@ namespace MilitaryUnit
 {
     class Infantry : People, IWeaponAssignment
     {
-        Random rnd = new Random();
         public Infantry()
         {
-            int rndName = rnd.Next(0, personFirstName.Length - 1);
-            int rndRank = rnd.Next(0, rank.Length - 1);
-            string infantryrank = rank.ElementAt(rndRank);
-            string infantryfirst =personFirstName.ElementAt(rndName);
-            string infantrylast = personLastName.ElementAt(rndName);
-            Console.WriteLine($"Welome {infantryrank},{infantryfirst},{infantrylast} from Alpha to the team");
+            Console.WriteLine($"Welome");
+            SelectPeople();
             WeaponAssignment();
         }
         public override void Train(string a)
@@ -26,11 +21,11 @@ namespace MilitaryUnit
         public void WeaponAssignment()
         {
             M16A4 m16 = new M16A4();
-            Console.WriteLine($"The Weapon you will have is a {m16.weaponName}", ConsoleColor.Red);
-            Console.WriteLine($"Your weapon is a {m16.weaponType}", ConsoleColor.Red);
-            Console.WriteLine($"The weapon uses{m16.weaponAmmo}", ConsoleColor.Red);
-            Console.WriteLine($"It fires {m16.weaponFireRate}", ConsoleColor.Red);
-            Console.WriteLine($"Its Damage Level is {m16.weaponDamage}", ConsoleColor.Red);
+            Console.WriteLine($"The Weapon you will have is a {m16.WeaponName}", ConsoleColor.Red);
+            Console.WriteLine($"Your weapon is a {m16.WeaponType}", ConsoleColor.Red);
+            Console.WriteLine($"The weapon uses{m16.WeaponAmmo}", ConsoleColor.Red);
+            Console.WriteLine($"It fires {m16.WeaponFireRate}", ConsoleColor.Red);
+            Console.WriteLine($"Its Damage Level is {m16.WeaponDamage}", ConsoleColor.Red);
         }
     }
 }

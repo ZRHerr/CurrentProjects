@@ -66,7 +66,7 @@ namespace FrontEnd.Services
 
         public async Task<List<SessionResponse>> GetSessionsAsync()
         {
-            var response = await _httpClient.GetAsync("/api/sessions");
+            var response = await _httpClient.GetAsync("/api/sessions/");
 
             response.EnsureSuccessStatusCode();
 

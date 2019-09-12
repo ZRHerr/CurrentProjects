@@ -8,11 +8,11 @@ namespace MilitaryUnit
 {
     class Weapons
     {
-        public string weaponType;
-        public string weaponName;
-        public string weaponAmmo;
-        public string weaponFireRate;
-        public string weaponDamage;
+        private string weaponType;
+        private string weaponName;
+        private string weaponAmmo;
+        private string weaponFireRate;
+        private string weaponDamage;
 
         public string WeaponType { get { return weaponType; } set { weaponType = value; } }
         public string WeaponName { get { return weaponName; } set { weaponName = value; } }

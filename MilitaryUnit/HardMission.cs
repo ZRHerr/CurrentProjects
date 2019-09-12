@@ -10,7 +10,7 @@ namespace MilitaryUnit
     {
         public HardMission()
         {
-            ScoutSniper scout = new ScoutSniper();
+            new ScoutSniper();
             Console.WriteLine("GoodLuck!");
         }
         public override void MissionRequirements()
