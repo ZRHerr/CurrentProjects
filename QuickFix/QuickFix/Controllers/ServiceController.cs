@@ -29,5 +29,13 @@ namespace QuickFix.Controllers
             };
             return View(serviceViewModel);
         }
+        public IActionResult Details(int id)
+        {
+            var services = _serviceReposity.GetServiceById(id);
+            if (services == null)
+                return NotFound();
+
+            return View(services);
+        }
     }
 }

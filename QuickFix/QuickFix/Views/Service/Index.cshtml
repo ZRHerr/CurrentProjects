@@ -17,7 +17,9 @@
 
                     <h3 class="pull-right">@item.BasePrice</h3>
 
-                    <h3>@item.ServiceType</h3>
+                    <h3>
+                        <a asp-controller="Service" asp-action="Details" asp-route-id="@item.Id">@item.ServiceType</a>
+                    </h3>
 
                     <p>@item.Description</p>
                 </div>                
