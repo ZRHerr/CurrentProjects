@@ -15,5 +15,6 @@ namespace QuickFix.Models
         public DateTime ServiceDate { get; set; }
         public DateTime CompletionDate { get; set; }
         public bool IsServiceDiscount { get; set; }
+        public bool IsComplete { get; set; }
     }
 }
