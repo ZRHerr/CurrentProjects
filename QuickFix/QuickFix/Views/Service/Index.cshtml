@@ -4,47 +4,22 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>@ViewBag.Title</h2>
+<h2>@Model.Title</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.services) {
-        <tr>
-            <td>
-                <h2>@item.Id</h2>
-            </td>
-            <td>
-                <h2>@item.ServiceType</h2>
-            </td>
-            <td>
-                <h2>@item.Description</h2>
-            </td>
-            <td>
-                <h2>@item.BasePrice</h2>
-            </td>
-            <td>
-                <h2>@item.ServiceDate</h2>
-            </td>
-            <td>
-                <h2>@item.CompletionDate</h2>
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+            @foreach (var item in Model.services)
+            {
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <img src="~/images/pending.jpg" />
+
+                    <h3 class="pull-right">@item.BasePrice</h3>
+
+                    <h3>@item.ServiceType</h3>
+
+                    <p>@item.Description</p>
+                </div>                
+            </div>
+            }

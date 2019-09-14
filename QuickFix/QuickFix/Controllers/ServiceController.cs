@@ -24,7 +24,7 @@ namespace QuickFix.Controllers
             var services = _serviceReposity.GetServices().OrderBy(s => s.ServiceType);
             var serviceViewModel = new ServiceViewModel()
             {
-                Title = "All active and past services",
+                Title = "All pending services",
                 services = services.ToList()
             };
             return View(serviceViewModel);
