@@ -7,9 +7,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using QuickFix.Models;
 
-[assembly: HostingStartup(typeof(QuickFix.Areas.Identity.IdentityHostingStartup))]
-namespace QuickFix.Areas.Identity
+[assembly: HostingStartup(typeof(QuickFix.Models.IdentityHostingStartup))]
+namespace QuickFix.Models
 {
+    //herrera2097@gmail.com
+    //password is P@ssword19
+    //in order to access in development.
     public class IdentityHostingStartup : IHostingStartup
     {
         public void Configure(IWebHostBuilder builder)
