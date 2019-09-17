@@ -1,4 +1,4 @@
-'<center>
+<center>
 "ZRHerr -- Misc - projects and exercises from my journey as a new developer"
 author: "Zachary R. Herrera<br /> <br /> <br /> U.S Marine Corps"
 institute: Microsoft Software & Systems Academy
@@ -12,12 +12,11 @@ Connect with a breif message [LinkedIn](https://www.linkedin.com/in/herrera-zr/)
 
 I'm Currently using Visual Studio 2019 / VSCode / LearnIDE & IntelliJ [Microsoft IDE](https://visualstudio.microsoft.com/), is recommended if your new to development.
 ---
-class: center, middle
 # Actively Working on:
 
 ## QuickFix
 *Personal Project | Mobile Mechanic Web Application
-*Using ASP.NET MVC pattern
+*Using ASP.NET MVC pattern <br />
 -[x] last-worked 
 ## Website
 *Personal Website will contain information allow you to connect with me
