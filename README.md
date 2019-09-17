@@ -1,12 +1,9 @@
-
-subtitle: "ZRHerr -- Misc - projects and exercises from my journey as a new developer"
+'<center>
+"ZRHerr -- Misc - projects and exercises from my journey as a new developer"
 author: "Zachary R. Herrera<br /> <br /> <br /> U.S Marine Corps"
 institute: Microsoft Software & Systems Academy
-output:
-    css: ["default", "../HTML&CSS work/main.css"]
 ---
 
-class: center, middle
 # Connect with me on LinkedIn
 
 Connect with a breif message [LinkedIn](https://www.linkedin.com/in/herrera-zr/):
@@ -36,5 +33,6 @@ class: center, middle
 *Very messy code "First Project (lol)"
 ---
 
-Any Feedback or Constructive Critisizm is welcome! [^1]
-[^1]: zachary.r.herrera@outlook.com 
+Any Feedback or Constructive Critisizm is welcome![^1]
+[^1]zachary.r.herrera@outlook.com 
+</center>'
