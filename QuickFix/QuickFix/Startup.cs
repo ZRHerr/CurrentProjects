@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using QuickFix.Models;
+using QuickFix.ViewModels;
 
 namespace QuickFix
 {
@@ -34,8 +35,8 @@ namespace QuickFix
             });
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddTransient<IServiceRepository, ServiceRepository>();
+            services.AddSignalR();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -56,6 +57,10 @@ namespace QuickFix
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseAuthentication();
+            app.UseSignalR(route =>
+            {
+                route.MapHub<ChatViewModel>("/Chat/Index");
+            });
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

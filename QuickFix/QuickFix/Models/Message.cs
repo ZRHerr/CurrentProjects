@@ -8,7 +8,7 @@ namespace QuickFix.Models
 {
     public class Message
     {
-        public int MessageId { get; set; }
+        public int Id { get; set; }
         [Required]
         public string UserName { get; set; }
         [Required]
@@ -16,5 +16,10 @@ namespace QuickFix.Models
         public DateTime When { get; set; }
         public string UserID { get; set; }
         public virtual AppUser Sender { get; set; }
+
+        public Message()
+        {
+            When = DateTime.Now;
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace QuickFix.Models
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDefaultIdentity<IdentityUser>()
+                services.AddDefaultIdentity<AppUser>()
                 .AddEntityFrameworkStores<AppDbContext>();
             });
         }
