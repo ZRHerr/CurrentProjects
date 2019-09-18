@@ -10,8 +10,8 @@ using QuickFix.Models;
 namespace QuickFix.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20190914223911_Identity")]
-    partial class Identity
+    [Migration("20190918181926_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -75,6 +75,9 @@ namespace QuickFix.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
@@ -114,6 +117,8 @@ namespace QuickFix.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -138,9 +143,11 @@ namespace QuickFix.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider");
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(128);
 
-                    b.Property<string>("ProviderKey");
+                    b.Property<string>("ProviderKey")
+                        .HasMaxLength(128);
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -171,15 +178,40 @@ namespace QuickFix.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider");
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(128);
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasMaxLength(128);
 
                     b.Property<string>("Value");
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("QuickFix.Models.Message", b =>
+                {
+                    b.Property<int>("MessageId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Text")
+                        .IsRequired();
+
+                    b.Property<string>("UserID");
+
+                    b.Property<string>("UserName")
+                        .IsRequired();
+
+                    b.Property<DateTime>("When");
+
+                    b.HasKey("MessageId");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("Message");
                 });
 
             modelBuilder.Entity("QuickFix.Models.Services", b =>
@@ -207,6 +239,16 @@ namespace QuickFix.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("services");
+                });
+
+            modelBuilder.Entity("QuickFix.Models.AppUser", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+
+                    b.ToTable("AppUser");
+
+                    b.HasDiscriminator().HasValue("AppUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -252,6 +294,13 @@ namespace QuickFix.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("QuickFix.Models.Message", b =>
+                {
+                    b.HasOne("QuickFix.Models.AppUser", "Sender")
+                        .WithMany("Messages")
+                        .HasForeignKey("UserID");
                 });
 #pragma warning restore 612, 618
         }
