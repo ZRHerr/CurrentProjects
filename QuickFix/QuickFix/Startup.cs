@@ -59,7 +59,7 @@ namespace QuickFix
             app.UseAuthentication();
             app.UseSignalR(route =>
             {
-                route.MapHub<ChatViewModel>("/Chat/Index");
+                route.MapHub<ChatViewModel>("/chat/index");
             });
             app.UseMvc(routes =>
             {
