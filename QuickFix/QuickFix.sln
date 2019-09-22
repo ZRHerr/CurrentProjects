@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickFix", "QuickFix\QuickF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTest", "XUnitTest\XUnitTest.csproj", "{D0F1D5BB-8998-4FA9-AE9C-8850F5359E15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickFix.Domain", "QuickFix.Domain\QuickFix.Domain.csproj", "{375DB63F-C738-4654-86D8-EFA993635F66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D0F1D5BB-8998-4FA9-AE9C-8850F5359E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0F1D5BB-8998-4FA9-AE9C-8850F5359E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0F1D5BB-8998-4FA9-AE9C-8850F5359E15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{375DB63F-C738-4654-86D8-EFA993635F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{375DB63F-C738-4654-86D8-EFA993635F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{375DB63F-C738-4654-86D8-EFA993635F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{375DB63F-C738-4654-86D8-EFA993635F66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
