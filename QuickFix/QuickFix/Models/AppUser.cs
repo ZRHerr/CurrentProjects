@@ -8,6 +8,7 @@ namespace QuickFix.Models
 {
     public class AppUser : IdentityUser
     {
+        public int? ScheduleId { get; set; }
         public AppUser()
         {
             Messages = new HashSet<Message>();
