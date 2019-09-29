@@ -7,7 +7,7 @@ using System.Text;
 
 namespace MainProject.Service.Repositories
 {
-    public class ServiceRepository
+    public class ServiceRepository : IServiceRepository
     {
         private readonly ApplicationDbContext _appDbContext;
 

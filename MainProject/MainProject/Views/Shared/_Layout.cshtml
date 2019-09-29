@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - MainProject</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -23,7 +24,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Service" asp-action="Index">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Forum" asp-action="Index">Forum</a>
                         </li>
                     </ul>
                 </div>
@@ -35,10 +39,19 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
+    <footer>
         <div class="container">
-            &copy; 2019 - MainProject - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <hr />
+            <div class="text-center center-block" style="vertical-align:bottom">
+
+                <a href="https://www.facebook.com/zachary.ryan.9883739"><i class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/Zachary58832593"><i class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="mailto:herrera2097@gmail.com?subject=WebSiteEmail"><i class="fa fa-envelope-square fa-3x social"></i></a>
+                <a href="https://www.linkedin.com/in/herrera-zr/"><i class="fa fa-linkedin-square fa-3x social"></i></a>
+            </div>
+
+            &copy; 2019 - Zachary Herrera <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
