@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.StaticFiles;
 using PersonalSite.Models;
 
 namespace PersonalSite.Controllers
@@ -34,9 +36,10 @@ namespace PersonalSite.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        //Cant seem to get this to work
         public IActionResult DownloadResume()
         {
-            return File("#", "#");
+            return File("~\\Content\\MyFile.pdf", "application/pdf", "ZRH.pdf");
         }
     }
 }
