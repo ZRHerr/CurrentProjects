@@ -14,8 +14,10 @@ I'm Currently using Visual Studio 2019 / VSCode / LearnIDE & IntelliJ [Microsoft
 
 # Actively Working on:
 
-## QuickFix
+## MainProject (Find Mobile Mechanic's)
 ---
+*Goal is to have a "Uber-like" webapp, for requesting mechanics to come do basic maintenance while you are at work/school
+*Currently building the baseline - using a forum in-app in order to discuss development approaches/bugs with anyone who wants to help build.
 *Personal Project | Mobile Mechanic Web Application <br />
 *Using ASP.NET MVC pattern <br />
 -[x] last-worked 
