@@ -10,16 +10,16 @@ namespace MainProject.Controllers
 {
     public class ServiceController : Controller
     {
-        private readonly IServiceRepository _serviceReposity;
+        private readonly IServiceRepository _serviceRepository;
 
         public ServiceController(IServiceRepository serviceRepository)
         {
-            _serviceReposity = serviceRepository;
+            _serviceRepository = serviceRepository;
         }
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var services = _serviceReposity.GetServices().OrderBy(s => s.ServiceType);
+            var services = _serviceRepository.GetServices().OrderBy(s => s.ServiceType);
             var serviceViewModel = new ServiceViewModel()
             {
                 Title = "All pending services",
@@ -29,7 +29,7 @@ namespace MainProject.Controllers
         }
         public IActionResult Details(int id)
         {
-            var services = _serviceReposity.GetServiceById(id);
+            var services = _serviceRepository.GetServiceById(id);
             if (services == null)
                 return NotFound();
 
