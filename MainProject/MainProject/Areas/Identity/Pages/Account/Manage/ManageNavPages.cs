@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using MainProject.Data.Models;
 
 namespace MainProject.Areas.Identity.Pages.Account.Manage
 {

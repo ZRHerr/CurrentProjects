@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MainProject.Service.Repositories
+namespace MainProject.Data.Models
 {
     public interface IServiceRepository
     {

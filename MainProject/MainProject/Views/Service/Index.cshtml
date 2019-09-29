@@ -1,4 +1,4 @@
-﻿@model QuickFix.ViewModels.ServiceViewModel
+﻿@model MainProject.Models.ViewModels.ServiceViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -9,7 +9,7 @@
     <p>
         <a asp-action="Create">Create New</a>
     </p>
-            @foreach (var item in Model.services)
+            @foreach (var item in Model.Services)
             {
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail">
