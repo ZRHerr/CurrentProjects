@@ -20,13 +20,14 @@ I'm Currently using Visual Studio 2019 / VSCode / LearnIDE & IntelliJ [Microsoft
 *Currently building the baseline - using a forum in-app in order to discuss development approaches/bugs with anyone who wants to help build. <br />
 *Personal Project | Mobile Mechanic Web Application <br />
 *Using ASP.NET MVC pattern <br />
--[x] last-worked 
+--- # Technologies & Concepts Used are:<br />
+C# OOP MVC Architectural Design Pattern ASP.NET Core 2.0 ASP.NET CORE Identity LINQ MSSQL Html &CSS JavaScript
 
-## Website
+## PersonalWebsite
 ---
 *Personal Website will contain information allow you to connect with me <br />
 *Will also contain professional resources <br />
-*Still need to start as of 20190916 
+*Still need to start as of 20190916 -- Almost finished still need to solve the current download resume issue;
 
 ## Roulette
 ---
