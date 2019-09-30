@@ -1,8 +1,5 @@
 <center>
-"ZRHerr -- Misc - projects and exercises from my journey as a new developer" <br />
-author: "Zachary R. Herrera<br /> <br /> <br /> U.S Marine Corps" <br />
-**Microsoft Software & Systems Academy**
----
+
 
 # Connect with me on LinkedIn
 ---
@@ -14,17 +11,20 @@ I'm Currently using Visual Studio 2019 / VSCode / LearnIDE & IntelliJ [Microsoft
 
 # Actively Working on:
 
-## QuickFix
+## MainProject (Find Mobile Mechanic's)
 ---
+*Goal is to have a "Uber-like" webapp, for requesting mechanics to come do basic maintenance while you are at work/school
+*Currently building the baseline - using a forum in-app in order to discuss development approaches/bugs with anyone who wants to help build. <br />
 *Personal Project | Mobile Mechanic Web Application <br />
 *Using ASP.NET MVC pattern <br />
--[x] last-worked 
+--- # Technologies & Concepts Used are:<br />
+C# OOP MVC Architectural Design Pattern ASP.NET Core 3.0 ASP.NET CORE Identity LINQ MSSQL Html &CSS JavaScript
 
-## Website
+## PersonalWebsite
 ---
 *Personal Website will contain information allow you to connect with me <br />
 *Will also contain professional resources <br />
-*Still need to start as of 20190916 
+*Still need to start as of 20190916 -- Almost finished still need to solve the current download resume issue; 20190929
 
 ## Roulette
 ---
@@ -42,3 +42,8 @@ I'm Currently using Visual Studio 2019 / VSCode / LearnIDE & IntelliJ [Microsoft
 Any Feedback or Constructive Critisizm is welcome!<br />
 zachary.r.herrera@outlook.com 
 </center>
+---
+"ZRHerr -- Misc - projects and exercises from my journey as a new developer" <br />
+author: "Zachary R. Herrera<br /> <br /> <br /> U.S Marine Corps" <br />
+**Microsoft Software & Systems Academy**
+---
