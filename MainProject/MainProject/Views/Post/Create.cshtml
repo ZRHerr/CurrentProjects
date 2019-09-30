@@ -1,0 +1,17 @@
+﻿@model MainProject.Models.ViewModels.NewPostViewModel
+
+<h1>New Post | @Model.ForumName</h1>
+<form asp-action="AddPost" method="post" id="addPostForm">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Content"></label>
+        <input asp-for="Content" class="form-control" />
+    </div>
+    <!--TODO: Create CSS for all forms, get rid of bootstrap-->
+<button type="submit" id="submitPostBtn" class="btn btn-submitPost">Submit Post</button>
+    <input asp-for="ForumId" type="hidden" />
+</form>
+
