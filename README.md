@@ -21,13 +21,13 @@ I'm Currently using Visual Studio 2019 / VSCode / LearnIDE & IntelliJ [Microsoft
 *Personal Project | Mobile Mechanic Web Application <br />
 *Using ASP.NET MVC pattern <br />
 --- # Technologies & Concepts Used are:<br />
-C# OOP MVC Architectural Design Pattern ASP.NET Core 2.0 ASP.NET CORE Identity LINQ MSSQL Html &CSS JavaScript
+C# OOP MVC Architectural Design Pattern ASP.NET Core 3.0 ASP.NET CORE Identity LINQ MSSQL Html &CSS JavaScript
 
 ## PersonalWebsite
 ---
 *Personal Website will contain information allow you to connect with me <br />
 *Will also contain professional resources <br />
-*Still need to start as of 20190916 -- Almost finished still need to solve the current download resume issue;
+*Still need to start as of 20190916 -- Almost finished still need to solve the current download resume issue; 20190929
 
 ## Roulette
 ---
