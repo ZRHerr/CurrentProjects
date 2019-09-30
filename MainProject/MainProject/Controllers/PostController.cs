@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using MainProject.Data.Models;
 using MainProject.Models.ViewModels;
+using MainProject.Service.Repositories;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MainProject.Controllers
@@ -11,9 +13,51 @@ namespace MainProject.Controllers
     public class PostController : Controller
     {
         private readonly IPost _postService;
-        public PostController(IPost postService)
+        private readonly IForum _forumService;
+        private static UserManager<ApplicationUser> _userManager;
+        public PostController(IPost postService, IForum forumService, UserManager<ApplicationUser> userManager)
         {
             _postService = postService;
+            _forumService = forumService;
+            _userManager = userManager;
+        }
+
+        //public methods
+
+        public IActionResult Create(int id)
+        {
+            var forum = _forumService.GetById(id);
+            var model = new NewPostViewModel
+            {
+                ForumName = forum.Title,
+                ForumId = forum.Id,
+                ForumImageUrl = forum.ImageUrl,
+                AuthorName = User.Identity.Name
+            };
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddPost(NewPostViewModel model)
+        {
+            var userId = _userManager.GetUserId(User);
+            var user = await _userManager.FindByIdAsync(userId);
+            var post = BuildPost(model, user);
+
+            //TODO User Rating
+            await _postService.Add(post);
+
+            return RedirectToAction("Index", "Post", post.Id);
+        }
+
+        private Post BuildPost(NewPostViewModel model, ApplicationUser user)
+        {
+            return new Post
+            {
+                Title = model.Title,
+                Content = model.Content,
+                Created = DateTime.Now,
+                User = user
+            };
         }
 
         public IActionResult Index(int id)
@@ -34,6 +78,8 @@ namespace MainProject.Controllers
             };
             return View(model);
         }
+
+        //private methods
 
         private IEnumerable<PostReplyViewModel> BuildPostReplies(IEnumerable<PostReply> replies)
         {

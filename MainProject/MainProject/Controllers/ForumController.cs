@@ -12,7 +12,7 @@ namespace MainProject.Controllers
     public class ForumController : Controller
     {
         private readonly IForum _forumService;
-        private readonly IPost _postService;
+        //private readonly IPost _postService;
         //Dependency Injection by using Interfaces.
         public ForumController(IForum forumService)
         {
@@ -42,6 +42,7 @@ namespace MainProject.Controllers
             {
                 Id = post.Id,
                 AuthorId = post.User.Id,
+                Author = post.User.UserName,
                 AuthorRating = post.User.Rating,
                 Title = post.Title,
                 DatePosted = post.Created.ToString(),
