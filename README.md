@@ -1,8 +1,5 @@
 <center>
-"ZRHerr -- Misc - projects and exercises from my journey as a new developer" <br />
-author: "Zachary R. Herrera<br /> <br /> <br /> U.S Marine Corps" <br />
-**Microsoft Software & Systems Academy**
----
+
 
 # Connect with me on LinkedIn
 ---
@@ -45,3 +42,8 @@ C# OOP MVC Architectural Design Pattern ASP.NET Core 3.0 ASP.NET CORE Identity L
 Any Feedback or Constructive Critisizm is welcome!<br />
 zachary.r.herrera@outlook.com 
 </center>
+---
+"ZRHerr -- Misc - projects and exercises from my journey as a new developer" <br />
+author: "Zachary R. Herrera<br /> <br /> <br /> U.S Marine Corps" <br />
+**Microsoft Software & Systems Academy**
+---
