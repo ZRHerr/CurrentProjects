@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MainProject.Service.Repositories;
 using MainProject.Data.Models;
+using MainProject.Service;
 
 namespace MainProject
 {
@@ -36,9 +37,11 @@ namespace MainProject
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddScoped<IEmailSender, EmailSender>();
             services.AddScoped<IForum, ForumService>();
             services.AddScoped<IServiceRepository, ServiceRepository>();
             services.AddScoped<IPost, PostService>();
+            services.AddScoped<IApplicationUser, ApplicationUserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

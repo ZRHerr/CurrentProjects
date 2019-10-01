@@ -42,7 +42,7 @@ namespace MainProject.Controllers
             {
                 Id = post.Id,
                 AuthorId = post.User.Id,
-                Author = post.User.UserName,
+                AuthorName = post.User.UserName,
                 AuthorRating = post.User.Rating,
                 Title = post.Title,
                 DatePosted = post.Created.ToString(),

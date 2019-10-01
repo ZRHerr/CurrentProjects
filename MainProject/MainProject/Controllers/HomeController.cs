@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using MainProject.Models;
 using MainProject.Models.ViewModels;
 using MainProject.Data.Models;
@@ -13,9 +9,9 @@ namespace MainProject.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IPost _postService;
+        private readonly IPost _postService;       
         public HomeController(IPost postService)
-        {
+        {           
             _postService = postService;
         }
         public IActionResult Index()
@@ -28,14 +24,37 @@ namespace MainProject.Controllers
         {
             var latestPosts = _postService.GetLatestPosts(5);
 
+            #region original code
+            //var posts = new List<PostListingViewModel>();
+            //foreach (var i in latestPosts)
+            //{
+            //    var pl = new PostListingViewModel
+            //    {
+            //        Id = i.Id,
+            //        Title = i.Title,
+            //        //Author = i.User.UserName,
+            //        //AuthorId = i.User.Id,
+            //        //AuthorRating = i.User.Rating,
+            //        DatePosted = i.Created.ToString(),
+            //        Forum = GetForumListingForPost(i)
+            //    };
+            //    posts.Add(pl);
+            //}
+           
+            //var model = new HomeIndexViewModel();
+            //model.LatestPosts = posts;
+            //model.SearchQuery = string.Empty;
+            //return model;
+            #endregion
             var posts = latestPosts.Select(post => new PostListingViewModel
             {
                 Id = post.Id,
                 Title = post.Title,
-                Author = post.User.UserName,
+                AuthorName = post.User.UserName,
                 AuthorId = post.User.Id,
                 AuthorRating = post.User.Rating,
                 DatePosted = post.Created.ToString(),
+                RepliesCount = post.Replies.Count(),
                 Forum = GetForumListingForPost(post)
 
             });
@@ -44,6 +63,7 @@ namespace MainProject.Controllers
                 LatestPosts = posts,
                 SearchQuery = ""
             };
+
         }
 
         private ForumListingViewModel GetForumListingForPost(Post post)
