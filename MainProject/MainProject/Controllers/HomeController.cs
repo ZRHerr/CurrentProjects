@@ -20,33 +20,10 @@ namespace MainProject.Controllers
             return View(model);
         }
 
-        private HomeIndexViewModel BuildHomeIndexModel()
+        public HomeIndexViewModel BuildHomeIndexModel()
         {
-            var latestPosts = _postService.GetLatestPosts(5);
-
-            #region original code
-            //var posts = new List<PostListingViewModel>();
-            //foreach (var i in latestPosts)
-            //{
-            //    var pl = new PostListingViewModel
-            //    {
-            //        Id = i.Id,
-            //        Title = i.Title,
-            //        //Author = i.User.UserName,
-            //        //AuthorId = i.User.Id,
-            //        //AuthorRating = i.User.Rating,
-            //        DatePosted = i.Created.ToString(),
-            //        Forum = GetForumListingForPost(i)
-            //    };
-            //    posts.Add(pl);
-            //}
-           
-            //var model = new HomeIndexViewModel();
-            //model.LatestPosts = posts;
-            //model.SearchQuery = string.Empty;
-            //return model;
-            #endregion
-            var posts = latestPosts.Select(post => new PostListingViewModel
+            var latest = _postService.GetLatestPosts(5);           
+            var posts = latest.Select(post => new PostListingViewModel
             {
                 Id = post.Id,
                 Title = post.Title,
@@ -61,11 +38,31 @@ namespace MainProject.Controllers
             return new HomeIndexViewModel
             {
                 LatestPosts = posts,
-                SearchQuery = ""
             };
 
         }
+        #region original code
+        //var posts = new List<PostListingViewModel>();
+        //foreach (var i in latestPosts)
+        //{
+        //    var pl = new PostListingViewModel
+        //    {
+        //        Id = i.Id,
+        //        Title = i.Title,
+        //        //Author = i.User.UserName,
+        //        //AuthorId = i.User.Id,
+        //        //AuthorRating = i.User.Rating,
+        //        DatePosted = i.Created.ToString(),
+        //        Forum = GetForumListingForPost(i)
+        //    };
+        //    posts.Add(pl);
+        //}
 
+        //var model = new HomeIndexViewModel();
+        //model.LatestPosts = posts;
+        //model.SearchQuery = string.Empty;
+        //return model;
+        #endregion
         private ForumListingViewModel GetForumListingForPost(Post post)
         {
             var forum = post.Forum;

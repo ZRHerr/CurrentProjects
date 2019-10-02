@@ -13,8 +13,7 @@ namespace MainProject.Models
 
         public string ProfileImageUrl { get; set; }
 
-        public int Rating { get; set; }
-
+        public int Rating { get; set; }       
         public bool IsActive { get; set; }
     }
 }

@@ -102,7 +102,7 @@ namespace MainProject.Controllers
             });
         }
         //Checking to see if the user is an admin to render views for Admin settings.
-        private bool IsAuthorAdmin(ApplicationUser user)
+        public static bool IsAuthorAdmin(ApplicationUser user)
         {
             return _userManager.GetRolesAsync(user).Result.Contains("Admin");
         }
