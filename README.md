@@ -11,33 +11,20 @@ I'm Currently using Visual Studio 2019 / VSCode / LearnIDE & IntelliJ [Microsoft
 
 # Actively Working on:
 
-## MainProject (Find Mobile Mechanic's)
----
-*Goal is to have a "Uber-like" webapp, for requesting mechanics to come do basic maintenance while you are at work/school
-*Currently building the baseline - using a forum in-app in order to discuss development approaches/bugs with anyone who wants to help build. <br />
-*Personal Project | Mobile Mechanic Web Application <br />
-*Using ASP.NET MVC pattern <br />
---- # Technologies & Concepts Used are:<br />
-C# OOP MVC Architectural Design Pattern ASP.NET Core 3.0 ASP.NET CORE Identity LINQ MSSQL Html &CSS JavaScript
-
-## PersonalWebsite
----
-*Personal Website will contain information allow you to connect with me <br />
-*Will also contain professional resources <br />
-*Still need to start as of 20190916 -- Almost finished still need to solve the current download resume issue; 20190929
-
 ## Roulette
 ---
 *Console Application .Net framework <br />
 *Representing the casino "Roulette" Game <br />
 *Need to clean up code and re-address algorithm's used from early in the course. 
 
-## SpaceGame
+## 2 Hour Exercise PayrollCollections
 ---
-* First Successful Application built. <br />
-* Looking to refactor the entire project. <br />
-* Very messy code First Project
+*Two hours to complete an MVC application that tracked employee payroll data <br />
+*Current version is the 2 hour version, possible edits in the future
 
+## Bisection Algorithm
+---
+*Utilized a new menu approach when completing this algorithm, Contains different guessing games.
 
 Any Feedback or Constructive Critisizm is welcome!<br />
 zachary.r.herrera@outlook.com 
