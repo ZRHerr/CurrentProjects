@@ -1,0 +1,49 @@
+﻿@model ServiceBookLog
+
+@{
+    ViewData["Title"] = "Create";
+}
+<br />
+<h2>Create New</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label">Date/label</label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentMileage" class="control-label">Current Mileage</label>
+                <input asp-for="CurrentMileage" class="form-control" />
+                <span asp-validation-for="CurrentMileage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label asp-for="CurrentFuelLevel" class="control-label">CurrentFuelLevel</label>
+                    <select asp-for="CurrentFuelLevel" class="form-control" id="sel1">
+                        <option>1/4</option>
+                        <option>2/4</option>
+                        <option>3/4</option>
+                        <option>4/4</option>
+                    </select>
+                </div>
+                <span asp-validation-for="CurrentFuelLevel" class="text-danger"></span>
+            </div>                        
+            <div class="form-group">
+                <label asp-for="Details" class="control-label">Additional Notes</label>
+                <input asp-for="Details" class="form-control" />
+                <span asp-validation-for="Details" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i>Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

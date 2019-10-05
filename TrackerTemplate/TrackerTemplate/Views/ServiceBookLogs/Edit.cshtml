@@ -1,0 +1,81 @@
+﻿@model TrackerTemplate.Models.ServiceBookLog
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<br />
+<h2>Edit</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ServiceBookLogId" />
+            <div class="form-group">
+                <label asp-for="Date" class="control-label">Date</label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentMileage" class="control-label">Current Mileage</label>
+                <input asp-for="CurrentMileage" class="form-control" />
+                <span asp-validation-for="CurrentMileage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label asp-for="CurrentFuelLevel" class="control-label">Current Fuel Level</label>
+                    <select asp-for="CurrentFuelLevel" class="form-control" id="sel1">
+                        <option>1/4</option>
+                        <option>2/4</option>
+                        <option>3/4</option>
+                        <option>4/4</option>
+                    </select>
+                </div>
+                <span asp-validation-for="CurrentFuelLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReturnedMileage" class="control-label">Returned Fuel Level</label>
+                <input asp-for="ReturnedMileage" class="form-control" />
+                <span asp-validation-for="ReturnedMileage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReturnFuelLevel" class="control-label">Fuel in Gallons</label>
+                <input asp-for="ReturnFuelLevel" class="form-control" />
+                <span asp-validation-for="ReturnFuelLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label asp-for="ServiceType" class="control-label">Did you have to Service the vehicle?</label>
+                    <select asp-for="ServiceType" class="form-control" id="sel1">
+                        <option>None</option>
+                        <option>Oil Change</option>
+                        <option>Brake Change</option>
+                        <option>Tire Change</option>
+                        <option>Air Filters</option>
+                        <option>Fuel Filters</option>
+                        <option>Spark Plugs</option>
+                        <option>Brake Fluid</option>
+                        <option>Alignment</option>
+                        <option>Glass Repair</option>
+                        <option>Power Steering</option>
+                        <option>Belt Change</option>
+                    </select>
+                </div>
+                <span asp-validation-for="ServiceType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Details" class="control-label">Details</label>
+                <input asp-for="Details" class="form-control" />
+                <span asp-validation-for="Details" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

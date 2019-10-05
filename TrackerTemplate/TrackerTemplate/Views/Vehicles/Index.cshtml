@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Vehicle>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br />
+
+<h2>Vehicles</h2>
+
+<hr />
+
+<p>
+    <a asp-action="Create"><button type="button" class="btn btn-primary"><i class="fas fa-plus"></i> Add A Vehicle</button></a>
+</p>
+
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+           Find <input type="text" name="SearchString" value="@ViewData["currentFilter"]" />
+            <a asp-action="Create"><button type="button" class="btn btn-primary"><i class="fas fa-search"></i> Search</button></a> 
+            <a asp-action="Index" class="btn btn-primary"><i class="far fa-eye"></i> See Full List</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["BrandSortParm"]">Make</a>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["ModelSortParm"]">Model</a>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VehicleId"><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button></a> &nbsp;
+                <a asp-action="Details" asp-route-id="@item.VehicleId"><button type="button" class="btn btn-info"><i class="fas fa-info-circle"></i> Service Booklet</button></a> &nbsp;
+                <a asp-action="Delete" asp-route-id="@item.VehicleId"><button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,41 @@
+﻿@model ServiceBookLog
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<br />
+<h3>СDelete</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Date
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+           Current Mileage
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentMileage)
+        </dd>
+        <dt>
+            ServiceType
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceType)
+        </dd>
+        <dt>
+           Returned Mileage
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReturnedMileage)
+        </dd>       
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ServiceBookLogId" />
+        <input type="submit" value="Submit" class="btn btn-danger" />
+    </form>
+</div>

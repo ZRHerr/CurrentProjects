@@ -1,0 +1,125 @@
+﻿@model Vehicle
+@{
+    ViewData["Title"] = "Details";
+}
+
+<br />
+
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <div class="row">
+            @if (!string.IsNullOrEmpty(Model.Image))
+            {
+                <div style="padding-left: 10px;">
+                    <dd>
+                        <img class="img-responsive rounded" style="max-width:500px; max-height:500px" src="@Url.Content("~/images/carimages/" + Model.Image)" alt="Vehicle Image">
+                    </dd>
+                </div>
+            }
+            <div class="col-md-6">
+                <dt>
+                    Make
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Brand)
+                </dd>
+                <dt>
+                    Model
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Model)
+                </dd>
+                <dt>
+                    Color
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Color)
+                </dd>
+                <dt>
+                    year
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ProductionYear)
+                </dd>
+                <dt>
+                    License Plage
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.LicensePlate)
+                </dd>
+                <dt>
+                    Owner
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Owner)
+                </dd>
+                <dt>
+                    Purchase Date
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.PurchaseDate)
+                </dd>
+                <dt>
+                    Mileage
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Mileage)
+                </dd>
+            </div>
+        </div>
+        <br />
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.VehicleId" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</a>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-auto">
+                <span><a asp-area="" asp-controller="ServiceBookLogs" asp-action="Create" asp-route-id="@Model.VehicleId" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Add an Entry of use"><i class="fas fa-wrench"></i>
+                   Add to Entry Log </a></span>
+            </div>
+        </div>
+
+        <br />
+
+        <h4>Log Book</h4>
+
+        <br />
+
+        <dd class="col-sm-12">
+            <table class="table">
+                <tr>
+                    <th>Date</th>
+                    <th>Mileage</th>
+                    <th>Service Type</th>
+                    <th>Fuel Level</th>
+                </tr>
+                @foreach (var item in Model.ServiceBooks)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ServiceBookLog.Date)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ServiceBookLog.CurrentMileage)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ServiceBookLog.ServiceType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ServiceBookLog.CurrentFuelLevel)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-controller="ServiceBookLogs" asp-route-id="@item.ServiceBookLog.ServiceBookLogId"><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i></button></a> &nbsp;
+                            <a asp-action="Details" asp-controller="ServiceBookLogs" asp-route-id="@item.ServiceBookLog.ServiceBookLogId"><button type="button" class="btn btn-info"><i class="fas fa-info-circle"></i></button></a> &nbsp;
+                            <a asp-action="Delete" asp-controller="ServiceBookLogs" asp-route-id="@item.ServiceBookLog.ServiceBookLogId"><button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button></a>
+                        </td>
+                    </tr>
+                }
+            </table>
+    </dl>
+</div>

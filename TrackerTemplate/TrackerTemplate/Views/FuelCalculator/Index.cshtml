@@ -1,0 +1,75 @@
+﻿@using TrackerTemplate.Models
+@{
+    ViewData["Title"] = "FuelCalculator";
+}
+
+@model TrackerTemplate.Models.FuelCalculator
+
+<br />
+<h2>Calculate your fuel consumption</h2>
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index" asp-controller="FuelCalculator">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="distance" placeholder="Distance" asp-for="Distance" />
+                </div>
+                <div class="form-group col-md-6">
+                    <select id="inputUnit" class="form-control" asp-for="DistanceUnit">
+                        <option selected>Miles</option>
+                        <option>Kilometers</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="fuelVolume" placeholder="FuelVolume" asp-for="FuelVolume" />
+                </div>
+                <div class="form-group col-md-6">
+                    <select class="form-control" asp-for="FuelUnit">
+                        <option selected>Gallons</option>
+                    </select>
+                </div>
+            </div>
+
+            <input type="button" class="btn btn-primary" value="Calculate" onclick="calc()" />
+
+            <br />
+            <hr />
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Consumption in Gallons per 100 Miles</label>
+                    <input type="text" class="form-control" id="Gallonsper100miles" readonly="readonly" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>MPG</label>
+                    <input type="text" class="form-control" id="mforonegallon" readonly="readonly" />
+                </div>
+            </div>
+
+            <script>function calc() {
+                    let distance = document.getElementById('distance').value;
+                    let fuelVolume = document.getElementById('fuelVolume').value;
+
+                    if (!distance || !fuelVolume) {
+                        document.getElementById('Gallonsper100miles').value = '';
+                        document.getElementById('mforonegallon').value = '';
+
+                        return;
+                    }
+
+                    let Gallonsper100miles = (Number(fuelVolume) / Number(distance)) * 100;
+                    let mforonegallon = Number(distance) / Number(fuelVolume);
+
+                    document.getElementById('Gallonsper100miles').value = Gallonsper100miles.toFixed(2);
+                    document.getElementById('mforonegallon').value = mforonegallon.toFixed(2);
+                }</script>
+        </form>
+    </div>
+</div>
+

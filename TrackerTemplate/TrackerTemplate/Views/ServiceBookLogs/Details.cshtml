@@ -1,0 +1,59 @@
+﻿@model ServiceBookLog
+
+@{
+    ViewData["Title"] = "Details";
+}
+<br />
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Date
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            Miles
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentMileage)
+        </dd>
+        <dt>
+           Service Type
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceType)
+        </dd>
+        <dt>
+            Returned Mileage
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReturnedMileage)
+        </dd>
+        <dt>
+            Returned Mileage
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReturnFuelLevel)
+        </dd>
+        <dt>
+            Service Type
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceType)
+        </dd>
+        <dt>
+            Notes
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ServiceBookLogId" class="btn btn-primary">Edit</a>
+</div>
